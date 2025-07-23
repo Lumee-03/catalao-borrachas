@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalão Borrachas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Header -->
+  <header class="bg-[#0a1e3a] text-white p-4 shadow">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <h1 class="text-2xl font-bold"><span class="text-orange-500">C</span>ATALÃO <span class="font-light">BORRACHAS</span></h1>
+      <nav class="space-x-6 hidden md:block">
+        <a href="#" class="hover:text-orange-500">Home</a>
+        <a href="#produtos" class="hover:text-orange-500">Produtos</a>
+        <a href="#servicos" class="hover:text-orange-500">Serviços</a>
+        <a href="#depoimentos" class="hover:text-orange-500">Depoimentos</a>
+        <a href="#contato" class="hover:text-orange-500">Contato</a>
+      </nav>
+      <a href="#contato" class="bg-orange-500 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-orange-600">Solicitar Orçamento</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gray-100 py-12">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold leading-tight">Tudo em EPIs, Borrachas, Mangueiras e Assistência Técnica em Catalão</h2>
+      <p class="mt-4 text-lg text-gray-600">Especialistas em soluções industriais com atendimento personalizado.</p>
+      <a href="#contato" class="mt-6 inline-block bg-orange-500 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-orange-600">Solicite um Orçamento</a>
+    </div>
+  </section>
+
+  <!-- Produtos -->
+  <section id="produtos" class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/000000/safety-helmet.png" class="mx-auto mb-2" alt="EPIs"/>
+        <h3 class="font-semibold">EPIs</h3>
+      </div>
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/000000/hose.png" class="mx-auto mb-2" alt="Mangueiras"/>
+        <h3 class="font-semibold">Mangueiras e Mangotes</h3>
+      </div>
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/000000/tools.png" class="mx-auto mb-2" alt="Ferramentas"/>
+        <h3 class="font-semibold">Ferramentas e Compressores</h3>
+      </div>
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/000000/service.png" class="mx-auto mb-2" alt="Serviços"/>
+        <h3 class="font-semibold">Serviços</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos e Assistência -->
+  <section class="py-12 bg-gray-50" id="depoimentos">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Depoimentos</h3>
+        <div class="bg-white p-4 shadow rounded">
+          <p class="text-yellow-500 mb-1">★★★★★</p>
+          <p class="text-sm mb-2">A Catalão Borrachas se tornou uma parceira nossa, com atendimento excelente e compromisso.</p>
+          <p class="font-semibold">Cleber Paulo <span class="text-gray-500">- Agrofava</span></p>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Assistência Técnica</h3>
+        <div class="bg-white p-4 shadow rounded">
+          <p class="mb-2 text-sm">Manutenção especializada em compressores, roçadeiras, bombas, betoneiras e muito mais.</p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Gamma_Logo.svg/2560px-Gamma_Logo.svg.png" alt="Gamma" class="h-8">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section class="py-12 bg-white" id="contato">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Contato & Localização</h3>
+        <p class="mb-2 flex items-center"><img src="https://img.icons8.com/ios-filled/20/26e07f/phone.png" class="mr-2"/> (64) 3411-2795 / (64) 99271-0067</p>
+        <p class="mb-2 flex items-center"><img src="https://img.icons8.com/ios-filled/20/000000/clock.png" class="mr-2"/> Seg. a Sex., 07:30 às 17:30</p>
+        <p class="mb-2">Av. Dr. Lamartine Pinto de Avelar, 408 – Sofor, GO</p>
+      </div>
+      <div>
+        <iframe class="w-full h-56 rounded" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Av.%20Dr.%20Lamartine%20Pinto%20de%20Avelar%20408,%20Catal%C3%A3o&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0a1e3a] text-white text-sm text-center py-4">
+    <p>&copy; 2025 Catalão Borrachas. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
