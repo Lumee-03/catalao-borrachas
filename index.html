@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Catalão Borrachas</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -17,10 +17,7 @@
   <!-- Cabeçalho -->
   <header class="bg-[#0a1e3a] shadow-md">
     <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <!-- Logo -->
       <h1 class="text-2xl font-bold">Catalão Borrachas</h1>
-
-      <!-- Menu de navegação -->
       <nav class="space-x-6 hidden md:flex items-center">
         <a href="#" class="hover:text-orange-400 transition">Home</a>
         <a href="#produtos" class="hover:text-orange-400 transition">Produtos</a>
@@ -33,194 +30,134 @@
     </div>
   </header>
 
-  
-<!-- Seção de Apresentação com <img> -->
-<section class="relative">
-  <!-- Imagem de fundo -->
-  <img src="foto1.png" alt="Imagem de fundo" class="w-full h-[70vh] object-contain md:object-cover md:h-[80vh]" />
+  <!-- Seção Apresentação -->
+  <section class="relative">
+    <img src="foto1.png" alt="Imagem de fundo" class="w-full h-[70vh] object-contain md:object-cover md:h-[80vh]" />
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="absolute inset-0 flex items-center pl-6 md:pl-20">
+      <h2 class="text-white text-2xl md:text-5xl font-bold max-w-xl leading-tight">
+        Tudo em EPIs, Borrachas, Mangueiras e Assistência técnica em Catalão
+      </h2>
+    </div>
+  </section>
 
-  <!-- Sobreposição escura -->
-  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+  <!-- Seção de Cards -->
+  <section class="bg-white py-12" id="produtos">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center text-gray-800">
+        <!-- Card 1 -->
+        <div class="flex flex-col items-center rounded-lg shadow-md p-6 hover:shadow-lg transition cursor-pointer">
+          <img src="epis.png" alt="EPIs" class="w-24 h-24 object-contain mb-4 mx-auto" />
+          <h3 class="text-lg font-semibold mb-6 min-h-[3rem]">EPIs</h3>
+          <p class="text-orange-500 font-medium hover:underline">Solicite aqui</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="flex flex-col items-center rounded-lg shadow-md p-6 hover:shadow-lg transition cursor-pointer">
+          <img src="mangueiras.png" alt="Mangueiras e Mangotes" class="w-24 h-24 object-contain mb-4 mx-auto" />
+          <h3 class="text-lg font-semibold mb-6 min-h-[3rem]">Mangueiras e Mangotes</h3>
+          <p class="text-orange-500 font-medium hover:underline">Solicite aqui</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="flex flex-col items-center rounded-lg shadow-md p-6 hover:shadow-lg transition cursor-pointer">
+          <img src="compressores.png" alt="Ferramentas e Compressores" class="w-24 h-24 object-contain mb-4 mx-auto" />
+          <h3 class="text-lg font-semibold mb-6 min-h-[3rem]">Ferramentas e Compressores</h3>
+          <p class="text-orange-500 font-medium hover:underline">Solicite aqui</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="flex flex-col items-center rounded-lg shadow-md p-6 hover:shadow-lg transition cursor-pointer">
+          <img src="serviços.png" alt="Serviços" class="w-24 h-24 object-contain mb-4 mx-auto" />
+          <h3 class="text-lg font-semibold mb-6 min-h-[3rem]">Serviços</h3>
+          <p class="text-orange-500 font-medium hover:underline">Solicite aqui</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Texto sobre a imagem -->
-  <div class="absolute inset-0 flex items-center pl-6 md:pl-20">
-    <h2 class="text-white text-2xl md:text-5xl font-bold max-w-xl leading-tight">
-      Tudo em EPIs, Borrachas, Mangueiras e Assistência técnica em Catalão
-    </h2>
-  </div>
-</section>
-
- 
-<!-- Seção de Cards com texto alinhado -->
-<section class="bg-white py-12">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+  <!-- Seção Depoimentos + Carrossel Ícones -->
+  <section class="bg-white py-16 px-4" id="depoimentos-servicos">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
       
-      <!-- Card 1: EPIs -->
-      <div class="flex flex-col items-center bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-        <img src="epis.png" alt="EPIs" class="w-24 h-24 object-contain mb-4 mx-auto" />
-        <h3 class="text-lg font-semibold mb-6 text-gray-800 min-h-[3rem]">EPIs</h3> <!-- altura fixa -->
-        <p class="text-orange-500 font-medium cursor-pointer hover:underline">Solicite aqui</p>
+      <!-- Card Depoimentos -->
+      <div class="bg-gray-100 rounded-xl shadow-lg p-6 text-center">
+        <h2 class="text-xl font-bold text-[#0a1e3a] mb-4">Depoimentos</h2>
+        <div id="testimonial-carousel" class="relative">
+          <div class="testimonial-item hidden">
+            <img src="cliente1.png" alt="Cleber Paulo Barbosa" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
+            <p class="italic text-gray-700 mb-2">“A Catalão Borrachas se tornou uma parceira nossa fornecendo atendimento diferenciado e comprometimento com seus clientes.”</p>
+            <p class="font-semibold text-[#0a1e3a]">Cleber Paulo Barbosa</p>
+            <p class="text-sm text-gray-500">Agrofava</p>
+          </div>
+          <div class="testimonial-item hidden">
+            <img src="cliente2.png" alt="Marcelo Souza Farias" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
+            <p class="italic text-gray-700 mb-2">“Serviços de qualidade e dentro do prazo combinado, atendendo também em horários de plantão.”</p>
+            <p class="font-semibold text-[#0a1e3a]">Marcelo Souza Farias</p>
+            <p class="text-sm text-gray-500">Pavsolo</p>
+          </div>
+          <div class="testimonial-item hidden">
+            <img src="cliente3.png" alt="Diego Florisbelo" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
+            <p class="italic text-gray-700 mb-2">“A Catalão Borrachas atende nossa empresa em todas as nossas necessidades, preço diferenciado e atendimento personalizado.”</p>
+            <p class="font-semibold text-[#0a1e3a]">Diego Florisbelo</p>
+            <p class="text-sm text-gray-500">Rifertil</p>
+          </div>
+        </div>
       </div>
-  
-      <!-- Card 2: Mangueiras e Mangotes -->
-      <div class="flex flex-col items-center bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-        <img src="mangueiras.png" alt="Mangueiras e Mangotes" class="w-24 h-24 object-contain mb-4 mx-auto" />
-        <h3 class="text-lg font-semibold mb-6 text-gray-800 min-h-[3rem]">Mangueiras e Mangotes</h3>
-        <p class="text-orange-500 font-medium cursor-pointer hover:underline">Solicite aqui</p>
+
+      <!-- Card Ícones com Descrição -->
+      <div class="bg-gray-100 rounded-xl shadow-lg p-6 text-center">
+        <h2 class="text-xl font-bold text-[#0a1e3a] mb-4">O que oferecemos</h2>
+        <div id="icon-carousel" class="relative">
+          <div class="icon-item hidden">
+            <img src="epis.png" alt="EPIs" class="w-16 h-16 mx-auto mb-4" />
+            <p class="font-semibold text-[#0a1e3a]">EPIs</p>
+            <p class="text-gray-600 text-sm mt-2">Equipamentos de proteção individual para segurança e conforto.</p>
+          </div>
+          <div class="icon-item hidden">
+            <img src="mangueiras.png" alt="Mangueiras e Mangotes" class="w-16 h-16 mx-auto mb-4" />
+            <p class="font-semibold text-[#0a1e3a]">Mangueiras e Mangotes</p>
+            <p class="text-gray-600 text-sm mt-2">Produtos resistentes e ideais para uso industrial e agrícola.</p>
+          </div>
+          <div class="icon-item hidden">
+            <img src="compressores.png" alt="Ferramentas e Compressores" class="w-16 h-16 mx-auto mb-4" />
+            <p class="font-semibold text-[#0a1e3a]">Ferramentas e Compressores</p>
+            <p class="text-gray-600 text-sm mt-2">Ferramentas elétricas, pneumáticas e compressores de ar.</p>
+          </div>
+          <div class="icon-item hidden">
+            <img src="serviços.png" alt="Serviços" class="w-16 h-16 mx-auto mb-4" />
+            <p class="font-semibold text-[#0a1e3a]">Serviços</p>
+            <p class="text-gray-600 text-sm mt-2">Assistência técnica e soluções personalizadas em Catalão.</p>
+          </div>
+        </div>
       </div>
-  
-      <!-- Card 3: Ferramentas e Compressores -->
-      <div class="flex flex-col items-center bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-        <img src="compressores.png" alt="Ferramentas e Compressores" class="w-24 h-24 object-contain mb-4 mx-auto" />
-        <h3 class="text-lg font-semibold mb-6 text-gray-800 min-h-[3rem]">Ferramentas e Compressores</h3>
-        <p class="text-orange-500 font-medium cursor-pointer hover:underline">Solicite aqui</p>
-      </div>
-  
-      <!-- Card 4: Serviços -->
-      <div class="flex flex-col items-center bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-        <img src="serviços.png" alt="Serviços" class="w-24 h-24 object-contain mb-4 mx-auto" />
-        <h3 class="text-lg font-semibold mb-6 text-gray-800 min-h-[3rem]">Serviços</h3>
-        <p class="text-orange-500 font-medium cursor-pointer hover:underline">Solicite aqui</p>
-      </div>
-  
+
     </div>
-  </div>
-</section>
+  </section>
 
-
-  <!-- Seção de Depoimentos -->
-<section class="bg-white py-16" id="depoimentos">
-  <div class="max-w-3xl mx-auto px-6 text-center">
-    <h2 class="text-2xl md:text-3xl font-bold text-[#0a1e3a] mb-10">Depoimentos</h2>
-    
-    <!-- Contêiner dos depoimentos -->
-    <div id="carousel" class="relative overflow-hidden">
-      <!-- Depoimento 1 -->
-      <div class="depoimento active transition-opacity duration-700 ease-in-out">
-        <img src="cliente1.png" alt="Cleber Paulo Barbosa" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
-        <p class="text-lg italic text-gray-700 mb-2">“A Catalão Borrachas se tornou uma parceira nossa fornecendo atendimento diferenciado e comprometimento com seus clientes.”</p>
-        <p class="font-semibold text-[#0a1e3a] mt-2">Cleber Paulo Barbosa</p>
-        <p class="text-sm text-gray-500">Agrofava</p>
-      </div>
-
-      <!-- Depoimento 2 -->
-      <div class="depoimento hidden transition-opacity duration-700 ease-in-out">
-        <img src="cliente2.png" alt="Marcelo Souza Farias" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
-        <p class="text-lg italic text-gray-700 mb-2">“Serviços de qualidade e dentro do prazo combinado, atendendo também em horários de plantão.”</p>
-        <p class="font-semibold text-[#0a1e3a] mt-2">Marcelo Souza Farias</p>
-        <p class="text-sm text-gray-500">Pavsolo</p>
-      </div>
-
-      <!-- Depoimento 3 -->
-      <div class="depoimento hidden transition-opacity duration-700 ease-in-out">
-        <img src="cliente3.png" alt="Diego Florisbelo" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
-        <p class="text-lg italic text-gray-700 mb-2">“A Catalão Borrachas atende nossa empresa em todas as nossas necessidades, preço diferenciado e atendimento personalizado.”</p>
-        <p class="font-semibold text-[#0a1e3a] mt-2">Diego Florisbelo</p>
-        <p class="text-sm text-gray-500">Rifertil</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Script do carrossel -->
-<script>
-  const depoimentos = document.querySelectorAll(".depoimento");
-  let index = 0;
-
-  setInterval(() => {
-    depoimentos[index].classList.add("hidden");
-    depoimentos[index].classList.remove("active");
-    
-    index = (index + 1) % depoimentos.length;
-
-    depoimentos[index].classList.remove("hidden");
-    depoimentos[index].classList.add("active");
-  }, 8000);
-</script>
-
-
-  <!-- Seção combinada de Depoimentos + Carrossel de Serviços -->
-<section class="bg-white py-16 px-4" id="depoimentos-servicos">
-  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-    
-    <!-- Card de Depoimentos -->
-    <div class="bg-gray-100 rounded-xl shadow-lg p-6 text-center">
-      <h2 class="text-xl font-bold text-[#0a1e3a] mb-4">Depoimentos</h2>
-      <div id="carouselDepoimentos" class="relative">
-        <!-- Depoimento 1 -->
-        <div class="depoimento active transition-opacity duration-700 ease-in-out">
-          <img src="cliente1.png" alt="Cleber Paulo Barbosa" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
-          <p class="italic text-gray-700 mb-2">“A Catalão Borrachas se tornou uma parceira nossa fornecendo atendimento diferenciado e comprometimento com seus clientes.”</p>
-          <p class="font-semibold text-[#0a1e3a]">Cleber Paulo Barbosa</p>
-          <p class="text-sm text-gray-500">Agrofava</p>
-        </div>
-        <!-- Depoimento 2 -->
-        <div class="depoimento hidden transition-opacity duration-700 ease-in-out">
-          <img src="cliente2.png" alt="Marcelo Souza Farias" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
-          <p class="italic text-gray-700 mb-2">“Serviços de qualidade e dentro do prazo combinado, atendendo também em horários de plantão.”</p>
-          <p class="font-semibold text-[#0a1e3a]">Marcelo Souza Farias</p>
-          <p class="text-sm text-gray-500">Pavsolo</p>
-        </div>
-        <!-- Depoimento 3 -->
-        <div class="depoimento hidden transition-opacity duration-700 ease-in-out">
-          <img src="cliente3.png" alt="Diego Florisbelo" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
-          <p class="italic text-gray-700 mb-2">“A Catalão Borrachas atende nossa empresa em todas as nossas necessidades, preço diferenciado e atendimento personalizado.”</p>
-          <p class="font-semibold text-[#0a1e3a]">Diego Florisbelo</p>
-          <p class="text-sm text-gray-500">Rifertil</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card de Ícones com descrição -->
-    <div class="bg-gray-100 rounded-xl shadow-lg p-6 text-center">
-      <h2 class="text-xl font-bold text-[#0a1e3a] mb-4">O que oferecemos</h2>
-      <div id="carouselServicos" class="relative">
-        <!-- Item 1 -->
-        <div class="servico active transition-opacity duration-700 ease-in-out">
-          <img src="epis.png" alt="EPIs" class="w-16 h-16 mx-auto mb-4" />
-          <p class="font-semibold text-[#0a1e3a]">EPIs</p>
-          <p class="text-gray-600 text-sm mt-2">Equipamentos de segurança para proteção individual e conforto no trabalho.</p>
-        </div>
-        <!-- Item 2 -->
-        <div class="servico hidden transition-opacity duration-700 ease-in-out">
-          <img src="mangueiras.png" alt="Mangueiras e Mangotes" class="w-16 h-16 mx-auto mb-4" />
-          <p class="font-semibold text-[#0a1e3a]">Mangueiras e Mangotes</p>
-          <p class="text-gray-600 text-sm mt-2">Alta resistência e variedade para aplicações industriais, agrícolas e automotivas.</p>
-        </div>
-        <!-- Item 3 -->
-        <div class="servico hidden transition-opacity duration-700 ease-in-out">
-          <img src="compressores.png" alt="Ferramentas e Compressores" class="w-16 h-16 mx-auto mb-4" />
-          <p class="font-semibold text-[#0a1e3a]">Ferramentas e Compressores</p>
-          <p class="text-gray-600 text-sm mt-2">Produtos de alta durabilidade para manutenção, construção e uso profissional.</p>
-        </div>
-        <!-- Item 4 -->
-        <div class="servico hidden transition-opacity duration-700 ease-in-out">
-          <img src="serviços.png" alt="Serviços" class="w-16 h-16 mx-auto mb-4" />
-          <p class="font-semibold text-[#0a1e3a]">Serviços</p>
-          <p class="text-gray-600 text-sm mt-2">Atendimento técnico especializado e suporte direto ao cliente, inclusive em plantões.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Script dos dois carrosseis -->
-<script>
-  const depoimentos = document.querySelectorAll(".depoimento");
-  const servicos = document.querySelectorAll(".servico");
-  let indexDepo = 0;
-  let indexServ = 0;
-
-  setInterval(() => {
+  <!-- Script para os carrosséis -->
+  <script>
     // Depoimentos
-    depoimentos[indexDepo].classList.add("hidden");
-    indexDepo = (indexDepo + 1) % depoimentos.length;
-    depoimentos[indexDepo].classList.remove("hidden");
+    const testimonials = document.querySelectorAll('#testimonial-carousel .testimonial-item');
+    let currentTestimonial = 0;
+    function showTestimonial(index) {
+      testimonials.forEach((el, i) => el.classList.toggle('hidden', i !== index));
+    }
+    setInterval(() => {
+      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+      showTestimonial(currentTestimonial);
+    }, 8000);
+    showTestimonial(currentTestimonial);
 
-    // Serviços
-    servicos[indexServ].classList.add("hidden");
-    indexServ = (indexServ + 1) % servicos.length;
-    servicos[indexServ].classList.remove("hidden");
-  }, 8000);
-</script>
+    // Ícones com descrição
+    const icons = document.querySelectorAll('#icon-carousel .icon-item');
+    let currentIcon = 0;
+    function showIcon(index) {
+      icons.forEach((el, i) => el.classList.toggle('hidden', i !== index));
+    }
+    setInterval(() => {
+      currentIcon = (currentIcon + 1) % icons.length;
+      showIcon(currentIcon);
+    }, 8000);
+    showIcon(currentIcon);
+  </script>
+
+</body>
+</html>
