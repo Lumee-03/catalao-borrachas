@@ -74,90 +74,114 @@
   </section>
 
   <!-- Seção Depoimentos + Carrossel Ícones -->
-  <section class="bg-white py-16 px-4" id="depoimentos-servicos">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<section class="bg-white py-16 px-4" id="depoimentos-servicos">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+    <!-- Card Depoimentos -->
+    <div class="bg-gray-100 rounded-xl shadow-lg p-6 flex flex-col items-center relative" style="height: 320px;">
+      <h2 class="text-xl font-bold text-[#0a1e3a] mb-4 w-full text-center">Depoimentos</h2>
       
-      <!-- Card Depoimentos -->
-      <div class="bg-gray-100 rounded-xl shadow-lg p-6 text-center">
-        <h2 class="text-xl font-bold text-[#0a1e3a] mb-4">Depoimentos</h2>
-        <div id="testimonial-carousel" class="relative">
-          <div class="testimonial-item hidden">
-            <img src="cliente1.png" alt="Cleber Paulo Barbosa" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
-            <p class="italic text-gray-700 mb-2">“A Catalão Borrachas se tornou uma parceira nossa fornecendo atendimento diferenciado e comprometimento com seus clientes.”</p>
-            <p class="font-semibold text-[#0a1e3a]">Cleber Paulo Barbosa</p>
-            <p class="text-sm text-gray-500">Agrofava</p>
-          </div>
-          <div class="testimonial-item hidden">
-            <img src="cliente2.png" alt="Marcelo Souza Farias" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
-            <p class="italic text-gray-700 mb-2">“Serviços de qualidade e dentro do prazo combinado, atendendo também em horários de plantão.”</p>
-            <p class="font-semibold text-[#0a1e3a]">Marcelo Souza Farias</p>
-            <p class="text-sm text-gray-500">Pavsolo</p>
-          </div>
-          <div class="testimonial-item hidden">
-            <img src="cliente3.png" alt="Diego Florisbelo" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
-            <p class="italic text-gray-700 mb-2">“A Catalão Borrachas atende nossa empresa em todas as nossas necessidades, preço diferenciado e atendimento personalizado.”</p>
-            <p class="font-semibold text-[#0a1e3a]">Diego Florisbelo</p>
-            <p class="text-sm text-gray-500">Rifertil</p>
-          </div>
+      <button id="prevTestimonial" aria-label="Anterior depoimento" class="absolute top-1/2 left-3 -translate-y-1/2 bg-[#0a1e3a] text-white p-2 rounded-full hover:bg-orange-500 transition">
+        &#8592;
+      </button>
+      <button id="nextTestimonial" aria-label="Próximo depoimento" class="absolute top-1/2 right-3 -translate-y-1/2 bg-[#0a1e3a] text-white p-2 rounded-full hover:bg-orange-500 transition">
+        &#8594;
+      </button>
+
+      <div id="testimonial-carousel" class="w-full h-full flex flex-col justify-center items-center px-12 text-center">
+        <div class="testimonial-item hidden">
+          <img src="cliente1.png" alt="Cleber Paulo Barbosa" class="w-20 h-20 rounded-full mb-4 object-cover" />
+          <p class="italic text-gray-700 mb-2">“A Catalão Borrachas se tornou uma parceira nossa fornecendo atendimento diferenciado e comprometimento com seus clientes.”</p>
+          <p class="font-semibold text-[#0a1e3a]">Cleber Paulo Barbosa</p>
+          <p class="text-sm text-gray-500">Agrofava</p>
+        </div>
+        <div class="testimonial-item hidden">
+          <img src="cliente2.png" alt="Marcelo Souza Farias" class="w-20 h-20 rounded-full mb-4 object-cover" />
+          <p class="italic text-gray-700 mb-2">“Serviços de qualidade e dentro do prazo combinado, atendendo também em horários de plantão.”</p>
+          <p class="font-semibold text-[#0a1e3a]">Marcelo Souza Farias</p>
+          <p class="text-sm text-gray-500">Pavsolo</p>
+        </div>
+        <div class="testimonial-item hidden">
+          <img src="cliente3.png" alt="Diego Florisbelo" class="w-20 h-20 rounded-full mb-4 object-cover" />
+          <p class="italic text-gray-700 mb-2">“A Catalão Borrachas atende nossa empresa em todas as nossas necessidades, preço diferenciado e atendimento personalizado.”</p>
+          <p class="font-semibold text-[#0a1e3a]">Diego Florisbelo</p>
+          <p class="text-sm text-gray-500">Rifertil</p>
         </div>
       </div>
-
-      <!-- Card Ícones com Descrição -->
-      <div class="bg-gray-100 rounded-xl shadow-lg p-6 text-center">
-        <h2 class="text-xl font-bold text-[#0a1e3a] mb-4">O que oferecemos</h2>
-        <div id="icon-carousel" class="relative">
-          <div class="icon-item hidden">
-            <img src="epis.png" alt="EPIs" class="w-16 h-16 mx-auto mb-4" />
-            <p class="font-semibold text-[#0a1e3a]">EPIs</p>
-            <p class="text-gray-600 text-sm mt-2">Equipamentos de proteção individual para segurança e conforto.</p>
-          </div>
-          <div class="icon-item hidden">
-            <img src="mangueiras.png" alt="Mangueiras e Mangotes" class="w-16 h-16 mx-auto mb-4" />
-            <p class="font-semibold text-[#0a1e3a]">Mangueiras e Mangotes</p>
-            <p class="text-gray-600 text-sm mt-2">Produtos resistentes e ideais para uso industrial e agrícola.</p>
-          </div>
-          <div class="icon-item hidden">
-            <img src="compressores.png" alt="Ferramentas e Compressores" class="w-16 h-16 mx-auto mb-4" />
-            <p class="font-semibold text-[#0a1e3a]">Ferramentas e Compressores</p>
-            <p class="text-gray-600 text-sm mt-2">Ferramentas elétricas, pneumáticas e compressores de ar.</p>
-          </div>
-          <div class="icon-item hidden">
-            <img src="serviços.png" alt="Serviços" class="w-16 h-16 mx-auto mb-4" />
-            <p class="font-semibold text-[#0a1e3a]">Serviços</p>
-            <p class="text-gray-600 text-sm mt-2">Assistência técnica e soluções personalizadas em Catalão.</p>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </section>
 
-  <!-- Script para os carrosséis -->
-  <script>
-    // Depoimentos
-    const testimonials = document.querySelectorAll('#testimonial-carousel .testimonial-item');
-    let currentTestimonial = 0;
-    function showTestimonial(index) {
-      testimonials.forEach((el, i) => el.classList.toggle('hidden', i !== index));
-    }
-    setInterval(() => {
-      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-      showTestimonial(currentTestimonial);
-    }, 8000);
+    <!-- Card Ícones com Descrição -->
+    <div class="bg-gray-100 rounded-xl shadow-lg p-6 relative text-center" style="height: 320px;">
+      <h2 class="text-xl font-bold text-[#0a1e3a] mb-4">O que oferecemos</h2>
+
+      <button id="prevIcon" aria-label="Anterior ícone" class="absolute top-1/2 left-3 -translate-y-1/2 bg-[#0a1e3a] text-white p-2 rounded-full hover:bg-orange-500 transition">
+        &#8592;
+      </button>
+      <button id="nextIcon" aria-label="Próximo ícone" class="absolute top-1/2 right-3 -translate-y-1/2 bg-[#0a1e3a] text-white p-2 rounded-full hover:bg-orange-500 transition">
+        &#8594;
+      </button>
+
+      <div id="icon-carousel" class="h-full flex flex-col justify-center items-center px-12">
+        <div class="icon-item hidden">
+          <img src="epis.png" alt="EPIs" class="w-16 h-16 mx-auto mb-4" />
+          <p class="font-semibold text-[#0a1e3a]">EPIs</p>
+          <p class="text-gray-600 text-sm mt-2">Equipamentos de proteção individual para segurança e conforto.</p>
+        </div>
+        <div class="icon-item hidden">
+          <img src="mangueiras.png" alt="Mangueiras e Mangotes" class="w-16 h-16 mx-auto mb-4" />
+          <p class="font-semibold text-[#0a1e3a]">Mangueiras e Mangotes</p>
+          <p class="text-gray-600 text-sm mt-2">Produtos resistentes e ideais para uso industrial e agrícola.</p>
+        </div>
+        <div class="icon-item hidden">
+          <img src="compressores.png" alt="Ferramentas e Compressores" class="w-16 h-16 mx-auto mb-4" />
+          <p class="font-semibold text-[#0a1e3a]">Ferramentas e Compressores</p>
+          <p class="text-gray-600 text-sm mt-2">Ferramentas elétricas, pneumáticas e compressores de ar.</p>
+        </div>
+        <div class="icon-item hidden">
+          <img src="serviços.png" alt="Serviços" class="w-16 h-16 mx-auto mb-4" />
+          <p class="font-semibold text-[#0a1e3a]">Serviços</p>
+          <p class="text-gray-600 text-sm mt-2">Assistência técnica e soluções personalizadas em Catalão.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Depoimentos
+  const testimonials = document.querySelectorAll('#testimonial-carousel .testimonial-item');
+  let currentTestimonial = 0;
+  function showTestimonial(index) {
+    testimonials.forEach((el, i) => el.classList.toggle('hidden', i !== index));
+  }
+  showTestimonial(currentTestimonial);
+  document.getElementById('prevTestimonial').addEventListener('click', () => {
+    currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
     showTestimonial(currentTestimonial);
+  });
+  document.getElementById('nextTestimonial').addEventListener('click', () => {
+    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+    showTestimonial(currentTestimonial);
+  });
 
-    // Ícones com descrição
-    const icons = document.querySelectorAll('#icon-carousel .icon-item');
-    let currentIcon = 0;
-    function showIcon(index) {
-      icons.forEach((el, i) => el.classList.toggle('hidden', i !== index));
-    }
-    setInterval(() => {
-      currentIcon = (currentIcon + 1) % icons.length;
-      showIcon(currentIcon);
-    }, 8000);
+  // Ícones
+  const icons = document.querySelectorAll('#icon-carousel .icon-item');
+  let currentIcon = 0;
+  function showIcon(index) {
+    icons.forEach((el, i) => el.classList.toggle('hidden', i !== index));
+  }
+  showIcon(currentIcon);
+  document.getElementById('prevIcon').addEventListener('click', () => {
+    currentIcon = (currentIcon - 1 + icons.length) % icons.length;
     showIcon(currentIcon);
-  </script>
+  });
+  document.getElementById('nextIcon').addEventListener('click', () => {
+    currentIcon = (currentIcon + 1) % icons.length;
+    showIcon(currentIcon);
+  });
+</script>
+
+  
 
 </body>
 </html>
