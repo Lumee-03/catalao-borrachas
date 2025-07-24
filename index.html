@@ -138,3 +138,89 @@
     depoimentos[index].classList.add("active");
   }, 8000);
 </script>
+
+
+  <!-- Seção combinada de Depoimentos + Carrossel de Serviços -->
+<section class="bg-white py-16 px-4" id="depoimentos-servicos">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    
+    <!-- Card de Depoimentos -->
+    <div class="bg-gray-100 rounded-xl shadow-lg p-6 text-center">
+      <h2 class="text-xl font-bold text-[#0a1e3a] mb-4">Depoimentos</h2>
+      <div id="carouselDepoimentos" class="relative">
+        <!-- Depoimento 1 -->
+        <div class="depoimento active transition-opacity duration-700 ease-in-out">
+          <img src="cliente1.png" alt="Cleber Paulo Barbosa" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
+          <p class="italic text-gray-700 mb-2">“A Catalão Borrachas se tornou uma parceira nossa fornecendo atendimento diferenciado e comprometimento com seus clientes.”</p>
+          <p class="font-semibold text-[#0a1e3a]">Cleber Paulo Barbosa</p>
+          <p class="text-sm text-gray-500">Agrofava</p>
+        </div>
+        <!-- Depoimento 2 -->
+        <div class="depoimento hidden transition-opacity duration-700 ease-in-out">
+          <img src="cliente2.png" alt="Marcelo Souza Farias" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
+          <p class="italic text-gray-700 mb-2">“Serviços de qualidade e dentro do prazo combinado, atendendo também em horários de plantão.”</p>
+          <p class="font-semibold text-[#0a1e3a]">Marcelo Souza Farias</p>
+          <p class="text-sm text-gray-500">Pavsolo</p>
+        </div>
+        <!-- Depoimento 3 -->
+        <div class="depoimento hidden transition-opacity duration-700 ease-in-out">
+          <img src="cliente3.png" alt="Diego Florisbelo" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
+          <p class="italic text-gray-700 mb-2">“A Catalão Borrachas atende nossa empresa em todas as nossas necessidades, preço diferenciado e atendimento personalizado.”</p>
+          <p class="font-semibold text-[#0a1e3a]">Diego Florisbelo</p>
+          <p class="text-sm text-gray-500">Rifertil</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card de Ícones com descrição -->
+    <div class="bg-gray-100 rounded-xl shadow-lg p-6 text-center">
+      <h2 class="text-xl font-bold text-[#0a1e3a] mb-4">O que oferecemos</h2>
+      <div id="carouselServicos" class="relative">
+        <!-- Item 1 -->
+        <div class="servico active transition-opacity duration-700 ease-in-out">
+          <img src="icon-epis.png" alt="EPIs" class="w-16 h-16 mx-auto mb-4" />
+          <p class="font-semibold text-[#0a1e3a]">EPIs</p>
+          <p class="text-gray-600 text-sm mt-2">Equipamentos de segurança para proteção individual e conforto no trabalho.</p>
+        </div>
+        <!-- Item 2 -->
+        <div class="servico hidden transition-opacity duration-700 ease-in-out">
+          <img src="icon-mangueiras.png" alt="Mangueiras e Mangotes" class="w-16 h-16 mx-auto mb-4" />
+          <p class="font-semibold text-[#0a1e3a]">Mangueiras e Mangotes</p>
+          <p class="text-gray-600 text-sm mt-2">Alta resistência e variedade para aplicações industriais, agrícolas e automotivas.</p>
+        </div>
+        <!-- Item 3 -->
+        <div class="servico hidden transition-opacity duration-700 ease-in-out">
+          <img src="icon-ferramentas.png" alt="Ferramentas e Compressores" class="w-16 h-16 mx-auto mb-4" />
+          <p class="font-semibold text-[#0a1e3a]">Ferramentas e Compressores</p>
+          <p class="text-gray-600 text-sm mt-2">Produtos de alta durabilidade para manutenção, construção e uso profissional.</p>
+        </div>
+        <!-- Item 4 -->
+        <div class="servico hidden transition-opacity duration-700 ease-in-out">
+          <img src="icon-servicos.png" alt="Serviços" class="w-16 h-16 mx-auto mb-4" />
+          <p class="font-semibold text-[#0a1e3a]">Serviços</p>
+          <p class="text-gray-600 text-sm mt-2">Atendimento técnico especializado e suporte direto ao cliente, inclusive em plantões.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Script dos dois carrosseis -->
+<script>
+  const depoimentos = document.querySelectorAll(".depoimento");
+  const servicos = document.querySelectorAll(".servico");
+  let indexDepo = 0;
+  let indexServ = 0;
+
+  setInterval(() => {
+    // Depoimentos
+    depoimentos[indexDepo].classList.add("hidden");
+    indexDepo = (indexDepo + 1) % depoimentos.length;
+    depoimentos[indexDepo].classList.remove("hidden");
+
+    // Serviços
+    servicos[indexServ].classList.add("hidden");
+    indexServ = (indexServ + 1) % servicos.length;
+    servicos[indexServ].classList.remove("hidden");
+  }, 8000);
+</script>
