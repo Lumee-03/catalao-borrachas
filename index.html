@@ -181,19 +181,28 @@
   });
 </script>
 
- <!-- Seção Nossos Fornecedores -->
+<!-- Seção Nossos Fornecedores -->
 <section class="bg-white py-12 px-4">
   <div class="max-w-7xl mx-auto">
     <h2 class="text-2xl font-bold text-center mb-8 text-[#0a1e3a]">Nossos Fornecedores</h2>
     
-    <div class="relative">
+    <div class="relative group">
       <!-- Setinha esquerda -->
-      <button id="scrollLeft" class="absolute left-0 top-1/2 -translate-y-1/2 bg-white border rounded-full shadow p-2 z-10 hover:bg-gray-100">
-        &#8592;
+      <button
+        id="scrollLeft"
+        class="absolute left-0 top-1/2 -translate-y-1/2 bg-white border rounded-full shadow p-2 z-10 opacity-0 group-hover:opacity-100 transition-opacity"
+        aria-label="Scroll Left"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#0a1e3a]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
       </button>
 
       <!-- Carrossel de fornecedores -->
-      <div id="fornecedoresCarousel" class="flex overflow-x-auto space-x-6 py-4 px-6 scrollbar-hide scroll-smooth">
+      <div
+        id="fornecedoresCarousel"
+        class="flex overflow-x-auto space-x-6 py-4 px-6 scrollbar-hide scroll-smooth"
+      >
         <img src="1.png" alt="Fornecedor 1" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
         <img src="2.png" alt="Fornecedor 2" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
         <img src="3.png" alt="Fornecedor 3" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
@@ -202,7 +211,6 @@
         <img src="6.png" alt="Fornecedor 6" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
         <img src="7.png" alt="Fornecedor 7" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
         <img src="8.png" alt="Fornecedor 8" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
-        <img src="9.png" alt="Fornecedor 9" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
         <img src="10.png" alt="Fornecedor 10" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
         <img src="11.png" alt="Fornecedor 11" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
         <img src="12.png" alt="Fornecedor 12" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
@@ -217,15 +225,21 @@
       </div>
 
       <!-- Setinha direita -->
-      <button id="scrollRight" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white border rounded-full shadow p-2 z-10 hover:bg-gray-100">
-        &#8594;
+      <button
+        id="scrollRight"
+        class="absolute right-0 top-1/2 -translate-y-1/2 bg-white border rounded-full shadow p-2 z-10 opacity-0 group-hover:opacity-100 transition-opacity"
+        aria-label="Scroll Right"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#0a1e3a]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
       </button>
     </div>
   </div>
 </section>
 
-<!-- Estilo para esconder a barra de rolagem -->
 <style>
+  /* Esconde a barra de rolagem */
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
@@ -235,7 +249,6 @@
   }
 </style>
 
-<!-- Script para setinhas de rolagem -->
 <script>
   const carousel = document.getElementById('fornecedoresCarousel');
   const scrollLeft = document.getElementById('scrollLeft');
