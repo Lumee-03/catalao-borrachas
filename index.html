@@ -227,45 +227,56 @@
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
 
 
-      <!-- Card Ícones com Descrição -->
-      <div class="bg-gray-100 rounded-xl shadow-lg p-6 relative text-center min-h-[320px]">
-        <h2 class="text-xl font-bold text-[#0a1e3a] mb-4">O que oferecemos</h2>
+     <!-- Card Ícones com Descrição -->
+<div class="bg-gray-100 rounded-xl shadow-lg p-6 relative text-center min-h-[320px]">
+  <h2 class="text-xl font-bold text-[#0a1e3a] mb-4">O que oferecemos</h2>
 
-        <button id="prevIcon" aria-label="Anterior ícone" class="absolute top-1/2 left-3 -translate-y-1/2 bg-[#0a1e3a] text-white p-2 rounded-full hover:bg-orange-500 transition">
-          &#8592;
-        </button>
-        <button id="nextIcon" aria-label="Próximo ícone" class="absolute top-1/2 right-3 -translate-y-1/2 bg-[#0a1e3a] text-white p-2 rounded-full hover:bg-orange-500 transition">
-          &#8594;
-        </button>
+  <button id="prevIcon" aria-label="Anterior ícone" class="absolute top-1/2 left-3 -translate-y-1/2 bg-[#0a1e3a] text-white p-2 rounded-full hover:bg-yellow-500 transition">
+    &#8592;
+  </button>
+  <button id="nextIcon" aria-label="Próximo ícone" class="absolute top-1/2 right-3 -translate-y-1/2 bg-[#0a1e3a] text-white p-2 rounded-full hover:bg-yellow-500 transition">
+    &#8594;
+  </button>
 
-        <div id="icon-carousel" class="h-full flex flex-col justify-center items-center px-6 sm:px-12">
-          <div class="icon-item hidden">
-            <img src="epis-sem-fundo.png" alt="EPIs" class="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4" />
-            <p class="font-semibold text-[#0a1e3a]">EPIs</p>
-            <p class="text-gray-600 text-xs sm:text-sm mt-2 px-4 sm:px-10">Trabalhamos com toda a linha de EPIs para atender a sua empresa. Equipamentos de proteção individual para segurança e conforto.</p>
-          </div>
-          <div class="icon-item hidden">
-            <img src="mangueiras-sem-fundo.png" alt="Mangueiras e Mangotes" class="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4" />
-            <p class="font-semibold text-[#0a1e3a]">Mangueiras e Mangotes</p>
-            <p class="text-gray-600 text-xs sm:text-sm mt-2 px-4 sm:px-10">Temos a linha de mangueiras e mangotes para a sua necessidade. Produtos resistentes e ideais para seu uso.</p>
-          </div>
-          <div class="icon-item hidden">
-            <img src="compressores-sem-fundo.png" alt="Ferramentas e Compressores" class="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4" />
-            <p class="font-semibold text-[#0a1e3a]">Ferramentas e Compressores</p>
-            <p class="text-gray-600 text-xs sm:text-sm mt-2 px-4 sm:px-10">Trabalhamos com toda linha de ferramentas e equipamentos (compressores, roçadeiras, furadeiras e etc). Ferramentas elétricas, pneumáticas e compressores de ar.</p>
-          </div>
-          <div class="icon-item hidden">
-            <img src="serviços.png" alt="Serviços" class="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4" />
-            <p class="font-semibold text-[#0a1e3a]">Serviços</p>
-            <p class="text-gray-600 text-xs sm:text-sm mt-2 px-4 sm:px-10">Oferecemos serviços de prensa para mangueiras, manutenção de compressores, manutenção de roçadeiras, manutenção de betoneiras. Assistência técnica autorizada GAMMA. Assistência técnica e soluções personalizadas em Catalão.</p>
-          </div>
-                 <div class="icon-item hidden">
-            <img src="serviços-sem-fundo.png" alt="Serviços" class="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4" />
-            <p class="font-semibold text-[#0a1e3a]">Serviços</p>
-            <p class="text-gray-600 text-xs sm:text-sm mt-2 px-4 sm:px-10">Oferecemos serviços de prensa para mangueiras, manutenção de compressores, manutenção de roçadeiras, manutenção de betoneiras. Assistência técnica autorizada GAMMA. Assistência técnica e soluções personalizadas em Catalão.</p>
-          </div>
-        </div>
-      </div>
+  <div id="icon-carousel" class="h-full flex flex-col justify-center items-center px-6 sm:px-12">
+    <div class="icon-item hidden transition-all duration-300 hover:ring-2 hover:ring-yellow-400 rounded-xl">
+      <img src="epis-sem-fundo.png" alt="EPIs" class="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-4" />
+      <p class="font-semibold text-[#0a1e3a]">EPIs</p>
+      <p class="text-gray-600 text-xs sm:text-sm mt-2 px-4 sm:px-10">
+        Trabalhamos com toda a linha de EPIs para atender a sua empresa. Equipamentos de proteção individual para segurança e conforto.
+      </p>
+    </div>
+    <div class="icon-item hidden transition-all duration-300 hover:ring-2 hover:ring-yellow-400 rounded-xl">
+      <img src="mangueiras-sem-fundo.png" alt="Mangueiras e Mangotes" class="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-4" />
+      <p class="font-semibold text-[#0a1e3a]">Mangueiras e Mangotes</p>
+      <p class="text-gray-600 text-xs sm:text-sm mt-2 px-4 sm:px-10">
+        Temos a linha de mangueiras e mangotes para a sua necessidade. Produtos resistentes e ideais para seu uso.
+      </p>
+    </div>
+    <div class="icon-item hidden transition-all duration-300 hover:ring-2 hover:ring-yellow-400 rounded-xl">
+      <img src="compressores-sem-fundo.png" alt="Ferramentas e Compressores" class="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-4" />
+      <p class="font-semibold text-[#0a1e3a]">Ferramentas e Compressores</p>
+      <p class="text-gray-600 text-xs sm:text-sm mt-2 px-4 sm:px-10">
+        Trabalhamos com toda linha de ferramentas e equipamentos (compressores, roçadeiras, furadeiras e etc). Ferramentas elétricas, pneumáticas e compressores de ar.
+      </p>
+    </div>
+    <div class="icon-item hidden transition-all duration-300 hover:ring-2 hover:ring-yellow-400 rounded-xl">
+      <img src="serviços.png" alt="Serviços" class="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-4" />
+      <p class="font-semibold text-[#0a1e3a]">Serviços</p>
+      <p class="text-gray-600 text-xs sm:text-sm mt-2 px-4 sm:px-10">
+        Oferecemos serviços de prensa para mangueiras, manutenção de compressores, manutenção de roçadeiras, manutenção de betoneiras. Assistência técnica autorizada GAMMA. Assistência técnica e soluções personalizadas em Catalão.
+      </p>
+    </div>
+    <div class="icon-item hidden transition-all duration-300 hover:ring-2 hover:ring-yellow-400 rounded-xl">
+      <img src="serviços-sem-fundo.png" alt="Serviços" class="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-4" />
+      <p class="font-semibold text-[#0a1e3a]">Serviços</p>
+      <p class="text-gray-600 text-xs sm:text-sm mt-2 px-4 sm:px-10">
+        Oferecemos serviços de prensa para mangueiras, manutenção de compressores, manutenção de roçadeiras, manutenção de betoneiras. Assistência técnica autorizada GAMMA. Assistência técnica e soluções personalizadas em Catalão.
+      </p>
+    </div>
+  </div>
+</div>
+
 
       <!-- Card Depoimentos -->
       <div class="bg-gray-100 rounded-xl shadow-lg p-6 flex flex-col items-center relative min-h-[320px]">
