@@ -24,10 +24,13 @@
 
 <header class="bg-[#0a1e3a] shadow-md sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-    <div class="flex items-center space-x-4">
-      <img src="logo.png" alt="Logo Catalão Borrachas" class="w-10 h-10 object-contain" />
-      <h1 class="text-xl sm:text-2xl font-bold leading-tight text-white animated-title">Catalão Borrachas</h1>
-    </div>
+    <!-- Logo -->
+    <img src="logo.png" alt="Logo Catalão Borrachas" class="h-10 sm:h-12 object-contain" />
+
+    <!-- Nome com animação -->
+    <h1 class="text-xl sm:text-2xl font-bold leading-tight animated-title">
+      Catalão Borrachas
+    </h1>
 
     <!-- Menu Desktop -->
     <nav class="hidden md:flex items-center space-x-6 text-sm sm:text-base">
@@ -64,18 +67,19 @@
   </nav>
 
   <style>
-    @keyframes fadeUp {
+    @keyframes pulseScale {
       0%, 100% {
+        transform: scale(1);
         opacity: 1;
-        transform: translateY(0);
       }
       50% {
-        opacity: 0.7;
-        transform: translateY(-5px);
+        transform: scale(1.1);
+        opacity: 0.8;
       }
     }
     .animated-title {
-      animation: fadeUp 3s ease-in-out infinite;
+      animation: pulseScale 3s ease-in-out infinite;
+      color: #f97316; /* laranja Tailwind orange-500 */
     }
   </style>
 </header>
