@@ -33,23 +33,27 @@
       animation: gradientMove 4s linear infinite;
     }
 
-    /* Fundo animado azul escuro <-> laranja */
+    /* Fundo animado com azul escuro predominante e toque sutil de laranja */
     @keyframes gradienteAzulLaranja {
-      0% {
+      0%, 100% {
         background-position: 0% 50%;
+        background-color: #0f172a; /* azul escuro */
       }
-      50% {
+      40%, 60% {
         background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
+        background-color: #f97316; /* laranja */
       }
     }
 
     .bg-animado {
-      background: linear-gradient(270deg, #0f172a, #f97316, #0f172a);
-      background-size: 600% 600%;
-      animation: gradienteAzulLaranja 20s ease infinite;
+      background: linear-gradient(270deg, 
+        #0f172a 0%, 
+        #1e2a48 40%, 
+        #f97316 50%, 
+        #1e2a48 60%, 
+        #0f172a 100%);
+      background-size: 800% 800%;
+      animation: gradienteAzulLaranja 25s ease infinite;
     }
   </style>
 </head>
@@ -137,6 +141,7 @@
 
 </body>
 </html>
+
 
 
   <!-- Seção de Cards -->
