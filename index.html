@@ -27,11 +27,13 @@
     <!-- Logo -->
     <div class="flex items-center space-x-4">
       <img src="logo.png" alt="Logo Catalão Borrachas" class="h-10 w-auto">
-      <h1 class="text-2xl sm:text-3xl font-bold whitespace-nowrap overflow-hidden border-r-2 border-white pr-2 animate-typing">
+      <h1 class="text-2xl sm:text-3xl font-bold relative">
         Catalão Borrachas
+        <span class="absolute left-0 -bottom-1 w-full h-[3px] bg-gradient-to-r from-orange-400 via-orange-500 to-orange-400 bg-[length:200%] animate-gradientMove"></span>
       </h1>
     </div>
-    <!-- Botão de menu para mobile -->
+
+    <!-- Botão de menu mobile -->
     <button id="menu-toggle" class="md:hidden text-orange-500 focus:outline-none">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -43,23 +45,16 @@
 </header>
 
 <style>
-@keyframes typing {
-  from { width: 0 }
-  to { width: 18ch }
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
 }
 
-@keyframes blink {
-  50% { border-color: transparent }
-}
-
-.animate-typing {
-  width: 18ch;
-  animation: typing 2.5s steps(18), blink 0.7s step-end infinite;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid white;
+.animate-gradientMove {
+  animation: gradientMove 4s linear infinite;
 }
 </style>
+
 
 
 
