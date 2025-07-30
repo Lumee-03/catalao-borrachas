@@ -10,256 +10,327 @@
     body {
       font-family: 'Inter', sans-serif;
     }
-    /* Esconde a barra de rolagem customizada */
-    .scrollbar-hide::-webkit-scrollbar {
-      display: none;
-    }
-    .scrollbar-hide {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
   </style>
 </head>
 <body class="bg-[#0a1e3a] text-white">
 
   <!-- Cabeçalho -->
-  <header class="bg-[#0a1e3a] shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <h1 class="text-2xl font-bold select-none">Catalão Borrachas</h1>
+<header class="bg-[#0a1e3a] shadow-md">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <h1 class="text-2xl font-bold">Catalão Borrachas</h1>
 
-      <!-- Menu Desktop -->
-      <nav class="hidden md:flex items-center space-x-6" role="navigation" aria-label="Menu principal">
-        <a href="#" class="hover:text-orange-400 transition" tabindex="0">Home</a>
-        <a href="#produtos" class="hover:text-orange-400 transition" tabindex="0">Produtos</a>
-        <a href="#servicos" class="hover:text-orange-400 transition" tabindex="0">Serviços</a>
-        <a href="#depoimentos" class="hover:text-orange-400 transition" tabindex="0">Depoimentos</a>
-        <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
-           target="_blank" rel="noopener noreferrer"
-           class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition focus:outline-none focus:ring-2 focus:ring-orange-400" tabindex="0">
-          Solicite seu Orçamento
-        </a>
-      </nav>
-
-      <!-- Botão hamburguer Mobile -->
-      <button id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu"
-        class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none focus:ring-2 focus:ring-orange-400">
-        <span class="w-6 h-0.5 bg-white transition-all duration-300 origin-left" id="bar1"></span>
-        <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar2"></span>
-        <span class="w-6 h-0.5 bg-white transition-all duration-300 origin-left" id="bar3"></span>
-      </button>
-    </div>
-
-    <!-- Menu Mobile -->
-    <nav id="mobile-menu" class="md:hidden hidden px-6 pb-6 space-y-4 bg-[#0a1e3a]" role="navigation" aria-label="Menu móvel">
-      <a href="#" class="block text-white hover:text-orange-400 transition" tabindex="0">Home</a>
-      <a href="#produtos" class="block text-white hover:text-orange-400 transition" tabindex="0">Produtos</a>
-      <a href="#servicos" class="block text-white hover:text-orange-400 transition" tabindex="0">Serviços</a>
-      <a href="#depoimentos" class="block text-white hover:text-orange-400 transition" tabindex="0">Depoimentos</a>
+    <!-- Menu Desktop -->
+    <nav class="hidden md:flex items-center space-x-6">
+      <a href="#" class="hover:text-orange-400 transition">Home</a>
+      <a href="#produtos" class="hover:text-orange-400 transition">Produtos</a>
+      <a href="#servicos" class="hover:text-orange-400 transition">Serviços</a>
+      <a href="#depoimentos" class="hover:text-orange-400 transition">Depoimentos</a>
       <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
          target="_blank" rel="noopener noreferrer"
-         class="block bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition text-center focus:outline-none focus:ring-2 focus:ring-orange-400" tabindex="0">
+         class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">
         Solicite seu Orçamento
       </a>
     </nav>
-  </header>
 
-  <!-- Script do Menu -->
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('mobile-menu');
-    const bar1 = document.getElementById('bar1');
-    const bar2 = document.getElementById('bar2');
-    const bar3 = document.getElementById('bar3');
+    <!-- Botão hamburguer Mobile -->
+    <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1">
+      <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar1"></span>
+      <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar2"></span>
+      <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar3"></span>
+    </button>
+  </div>
 
-    toggle.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') === 'true' || false;
-      toggle.setAttribute('aria-expanded', !expanded);
-      menu.classList.toggle('hidden');
+  <!-- Menu Mobile -->
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-3">
+    <a href="#" class="block text-white hover:text-orange-400 transition">Home</a>
+    <a href="#produtos" class="block text-white hover:text-orange-400 transition">Produtos</a>
+    <a href="#servicos" class="block text-white hover:text-orange-400 transition">Serviços</a>
+    <a href="#depoimentos" class="block text-white hover:text-orange-400 transition">Depoimentos</a>
+    <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
+       target="_blank" rel="noopener noreferrer"
+       class="block bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition text-center">
+      Solicite seu Orçamento
+    </a>
+  </div>
+</header>
 
-      // Animação do botão hambúrguer → X
-      bar1.classList.toggle('rotate-45');
-      bar1.classList.toggle('translate-y-2');
+<!-- Script do Menu -->
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
 
-      bar2.classList.toggle('opacity-0');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
 
-      bar3.classList.toggle('-rotate-45');
-      bar3.classList.toggle('-translate-y-2');
-    });
-  </script>
+    // Animação do botão hambúrguer → X
+    bar1.classList.toggle('rotate-45');
+    bar1.classList.toggle('translate-y-2');
+
+    bar2.classList.toggle('opacity-0');
+
+    bar3.classList.toggle('-rotate-45');
+    bar3.classList.toggle('-translate-y-2');
+  });
+</script>
 
   <!-- Seção Apresentação -->
-  <section class="relative">
-    <!-- Imagem de fundo -->
-    <img src="foto1.png" alt="Imagem de fundo com produtos da Catalão Borrachas" class="w-full h-[70vh] object-cover md:h-[80vh]" loading="lazy" />
+<section class="relative">
+  <!-- Imagem de fundo -->
+  <img src="foto1.png" alt="Imagem de fundo" class="w-full h-[70vh] object-cover md:h-[80vh]" />
 
-    <!-- Sobreposição escura -->
-    <div class="absolute inset-0 bg-black/60"></div>
+  <!-- Sobreposição escura -->
+  <div class="absolute inset-0 bg-black/60"></div>
 
-    <!-- Texto sobre a imagem -->
-    <div class="absolute inset-0 flex items-center justify-start px-6 md:px-20">
-      <h2 class="text-white text-2xl md:text-5xl font-bold max-w-3xl leading-tight drop-shadow-lg select-none">
-        Tudo em EPIs, Borrachas, Mangueiras e Assistência Técnica em Catalão
-      </h2>
-    </div>
-  </section>
+  <!-- Texto sobre a imagem -->
+  <div class="absolute inset-0 flex items-center justify-start px-6 md:px-20">
+    <h2 class="text-white text-2xl md:text-5xl font-bold max-w-3xl leading-tight drop-shadow-lg">
+      Tudo em EPIs, Borrachas, Mangueiras e Assistência Técnica em Catalão
+    </h2>
+  </div>
+</section>
+
 
   <!-- Seção de Cards -->
   <section class="bg-white py-12" id="produtos">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center text-gray-800">
-        <!-- Card Template -->
-        <div class="flex flex-col items-center rounded-lg shadow-md p-6 hover:shadow-lg transition cursor-pointer select-none" tabindex="0" role="button" aria-label="Solicitar orçamento para EPIs">
-          <img src="epis.png" alt="Imagem EPIs" class="w-24 h-24 object-contain mb-4 mx-auto" loading="lazy" />
+        <!-- Card 1 -->
+        <div class="flex flex-col items-center rounded-lg shadow-md p-6 hover:shadow-lg transition cursor-pointer">
+          <img src="epis.png" alt="EPIs" class="w-24 h-24 object-contain mb-4 mx-auto" />
           <h3 class="text-lg font-semibold mb-6 min-h-[3rem]">EPIs</h3>
-          <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20produtos%20e%20servi%C3%A7os%20da%20Catal%C3%A3o%20Borrachas.%20Poderia%20me%20ajudar%3F" 
-             target="_blank" rel="noopener noreferrer" 
-             class="text-orange-500 font-medium hover:underline cursor-pointer" tabindex="0" aria-label="Solicitar orçamento para EPIs">
-            Solicite aqui
-          </a>
+         <p>
+  <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20produtos%20e%20servi%C3%A7os%20da%20Catal%C3%A3o%20Borrachas.%20Poderia%20me%20ajudar%3F" target="_blank" rel="noopener noreferrer" class="text-orange-500 font-medium hover:underline cursor-pointer">
+    Solicite aqui
+  </a>
+</p>
         </div>
-
-        <div class="flex flex-col items-center rounded-lg shadow-md p-6 hover:shadow-lg transition cursor-pointer select-none" tabindex="0" role="button" aria-label="Solicitar orçamento para Mangueiras e Mangotes">
-          <img src="mangueiras.png" alt="Imagem Mangueiras e Mangotes" class="w-24 h-24 object-contain mb-4 mx-auto" loading="lazy" />
+        <!-- Card 2 -->
+        <div class="flex flex-col items-center rounded-lg shadow-md p-6 hover:shadow-lg transition cursor-pointer">
+          <img src="mangueiras.png" alt="Mangueiras e Mangotes" class="w-24 h-24 object-contain mb-4 mx-auto" />
           <h3 class="text-lg font-semibold mb-6 min-h-[3rem]">Mangueiras e Mangotes</h3>
-          <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20produtos%20e%20servi%C3%A7os%20da%20Catal%C3%A3o%20Borrachas.%20Poderia%20me%20ajudar%3F" 
-             target="_blank" rel="noopener noreferrer" 
-             class="text-orange-500 font-medium hover:underline cursor-pointer" tabindex="0" aria-label="Solicitar orçamento para Mangueiras e Mangotes">
-            Solicite aqui
-          </a>
+          <p>
+  <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20produtos%20e%20servi%C3%A7os%20da%20Catal%C3%A3o%20Borrachas.%20Poderia%20me%20ajudar%3F" target="_blank" rel="noopener noreferrer" class="text-orange-500 font-medium hover:underline cursor-pointer">
+    Solicite aqui
+  </a>
+</p>
         </div>
-
-        <div class="flex flex-col items-center rounded-lg shadow-md p-6 hover:shadow-lg transition cursor-pointer select-none" tabindex="0" role="button" aria-label="Solicitar orçamento para Ferramentas e Compressores">
-          <img src="compressores.png" alt="Imagem Ferramentas e Compressores" class="w-24 h-24 object-contain mb-4 mx-auto" loading="lazy" />
+        <!-- Card 3 -->
+        <div class="flex flex-col items-center rounded-lg shadow-md p-6 hover:shadow-lg transition cursor-pointer">
+          <img src="compressores.png" alt="Ferramentas e Compressores" class="w-24 h-24 object-contain mb-4 mx-auto" />
           <h3 class="text-lg font-semibold mb-6 min-h-[3rem]">Ferramentas e Compressores</h3>
-          <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20produtos%20e%20servi%C3%A7os%20da%20Catal%C3%A3o%20Borrachas.%20Poderia%20me%20ajudar%3F" 
-             target="_blank" rel="noopener noreferrer" 
-             class="text-orange-500 font-medium hover:underline cursor-pointer" tabindex="0" aria-label="Solicitar orçamento para Ferramentas e Compressores">
-            Solicite aqui
-          </a>
+          <p>
+  <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20produtos%20e%20servi%C3%A7os%20da%20Catal%C3%A3o%20Borrachas.%20Poderia%20me%20ajudar%3F" target="_blank" rel="noopener noreferrer" class="text-orange-500 font-medium hover:underline cursor-pointer">
+    Solicite aqui
+  </a>
+</p>
         </div>
-
-        <div class="flex flex-col items-center rounded-lg shadow-md p-6 hover:shadow-lg transition cursor-pointer select-none" tabindex="0" role="button" aria-label="Solicitar orçamento para Serviços">
-          <img src="serviços.png" alt="Imagem Serviços" class="w-24 h-24 object-contain mb-4 mx-auto" loading="lazy" />
+        <!-- Card 4 -->
+        <div class="flex flex-col items-center rounded-lg shadow-md p-6 hover:shadow-lg transition cursor-pointer">
+          <img src="serviços.png" alt="Serviços" class="w-24 h-24 object-contain mb-4 mx-auto" />
           <h3 class="text-lg font-semibold mb-6 min-h-[3rem]">Serviços</h3>
-          <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20produtos%20e%20servi%C3%A7os%20da%20Catal%C3%A3o%20Borrachas.%20Poderia%20me%20ajudar%3F" 
-             target="_blank" rel="noopener noreferrer" 
-             class="text-orange-500 font-medium hover:underline cursor-pointer" tabindex="0" aria-label="Solicitar orçamento para Serviços">
-            Solicite aqui
-          </a>
+         <p>
+  <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20produtos%20e%20servi%C3%A7os%20da%20Catal%C3%A3o%20Borrachas.%20Poderia%20me%20ajudar%3F" target="_blank" rel="noopener noreferrer" class="text-orange-500 font-medium hover:underline cursor-pointer">
+    Solicite aqui
+  </a>
+</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Seção Depoimentos + Carrossel Ícones -->
-  <section class="bg-white py-16 px-4" id="depoimentos">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<section class="bg-white py-16 px-4" id="depoimentos-servicos">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
-      <!-- Card Depoimentos -->
-      <div class="bg-gray-100 rounded-xl shadow-lg p-6 flex flex-col items-center relative min-h-[320px]">
-        <h2 class="text-xl font-bold text-[#0a1e3a] mb-6 w-full text-center select-none">Depoimentos</h2>
-        
-        <button id="prevTestimonial" aria-label="Anterior depoimento" class="absolute top-1/2 left-3 -translate-y-1/2 bg-[#0a1e3a] text-white p-2 rounded-full hover:bg-orange-500 transition focus:outline-none focus:ring-2 focus:ring-orange-400">
-          &#8592;
-        </button>
-        <button id="nextTestimonial" aria-label="Próximo depoimento" class="absolute top-1/2 right-3 -translate-y-1/2 bg-[#0a1e3a] text-white p-2 rounded-full hover:bg-orange-500 transition focus:outline-none focus:ring-2 focus:ring-orange-400">
-          &#8594;
-        </button>
+    <!-- Card Depoimentos -->
+    <div class="bg-gray-100 rounded-xl shadow-lg p-6 flex flex-col items-center relative" style="height: 320px;">
+      <h2 class="text-xl font-bold text-[#0a1e3a] mb-4 w-full text-center">Depoimentos</h2>
+      
+      <button id="prevTestimonial" aria-label="Anterior depoimento" class="absolute top-1/2 left-3 -translate-y-1/2 bg-[#0a1e3a] text-white p-2 rounded-full hover:bg-orange-500 transition">
+        &#8592;
+      </button>
+      <button id="nextTestimonial" aria-label="Próximo depoimento" class="absolute top-1/2 right-3 -translate-y-1/2 bg-[#0a1e3a] text-white p-2 rounded-full hover:bg-orange-500 transition">
+        &#8594;
+      </button>
 
-        <div id="testimonial-carousel" class="w-full h-full flex flex-col justify-center items-center px-8 text-center select-text">
-          <div class="testimonial-item hidden" role="group" aria-roledescription="slide" aria-label="Depoimento 1">
-            <img src="cliente1.png" alt="Cleber Paulo Barbosa" class="w-20 h-20 rounded-full mb-4 object-cover" loading="lazy" />
-            <p class="italic text-gray-700 mb-2">“A Catalão Borrachas se tornou uma parceira nossa fornecendo atendimento diferenciado e comprometimento com seus clientes.”</p>
-            <p class="font-semibold text-[#0a1e3a]">Cleber Paulo Barbosa</p>
-            <p class="text-sm text-gray-500">Agrofava</p>
-          </div>
-          <div class="testimonial-item hidden" role="group" aria-roledescription="slide" aria-label="Depoimento 2">
-            <img src="cliente2.png" alt="Marcelo Souza Farias" class="w-20 h-20 rounded-full mb-4 object-cover" loading="lazy" />
-            <p class="italic text-gray-700 mb-2">“Serviços de qualidade e dentro do prazo combinado, atendendo também em horários de plantão.”</p>
-            <p class="font-semibold text-[#0a1e3a]">Marcelo Souza Farias</p>
-            <p class="text-sm text-gray-500">Pavsolo</p>
-          </div>
-          <div class="testimonial-item hidden" role="group" aria-roledescription="slide" aria-label="Depoimento 3">
-            <img src="cliente3.png" alt="Diego Florisbelo" class="w-20 h-20 rounded-full mb-4 object-cover" loading="lazy" />
-            <p class="italic text-gray-700 mb-2">“A Catalão Borrachas atende nossa empresa em todas as nossas necessidades, preço diferenciado e atendimento personalizado.”</p>
-            <p class="font-semibold text-[#0a1e3a]">Diego Florisbelo</p>
-            <p class="text-sm text-gray-500">Rifertil</p>
-          </div>
+      <div id="testimonial-carousel" class="w-full h-full flex flex-col justify-center items-center px-12 text-center">
+        <div class="testimonial-item hidden">
+          <img src="cliente1.png" alt="Cleber Paulo Barbosa" class="w-20 h-20 rounded-full mb-4 object-cover" />
+          <p class="italic text-gray-700 mb-2">“A Catalão Borrachas se tornou uma parceira nossa fornecendo atendimento diferenciado e comprometimento com seus clientes.”</p>
+          <p class="font-semibold text-[#0a1e3a]">Cleber Paulo Barbosa</p>
+          <p class="text-sm text-gray-500">Agrofava</p>
+        </div>
+        <div class="testimonial-item hidden">
+          <img src="cliente2.png" alt="Marcelo Souza Farias" class="w-20 h-20 rounded-full mb-4 object-cover" />
+          <p class="italic text-gray-700 mb-2">“Serviços de qualidade e dentro do prazo combinado, atendendo também em horários de plantão.”</p>
+          <p class="font-semibold text-[#0a1e3a]">Marcelo Souza Farias</p>
+          <p class="text-sm text-gray-500">Pavsolo</p>
+        </div>
+        <div class="testimonial-item hidden">
+          <img src="cliente3.png" alt="Diego Florisbelo" class="w-20 h-20 rounded-full mb-4 object-cover" />
+          <p class="italic text-gray-700 mb-2">“A Catalão Borrachas atende nossa empresa em todas as nossas necessidades, preço diferenciado e atendimento personalizado.”</p>
+          <p class="font-semibold text-[#0a1e3a]">Diego Florisbelo</p>
+          <p class="text-sm text-gray-500">Rifertil</p>
         </div>
       </div>
-
-      <!-- Card Ícones com Descrição -->
-      <div class="bg-gray-100 rounded-xl shadow-lg p-6 relative text-center min-h-[320px] select-text">
-        <h2 class="text-xl font-bold text-[#0a1e3a] mb-6 select-none">O que oferecemos</h2>
-
-        <button id="prevIcon" aria-label="Anterior ícone" class="absolute top-1/2 left-3 -translate-y-1/2 bg-[#0a1e3a] text-white p-2 rounded-full hover:bg-orange-500 transition focus:outline-none focus:ring-2 focus:ring-orange-400">
-          &#8592;
-        </button>
-        <button id="nextIcon" aria-label="Próximo ícone" class="absolute top-1/2 right-3 -translate-y-1/2 bg-[#0a1e3a] text-white p-2 rounded-full hover:bg-orange-500 transition focus:outline-none focus:ring-2 focus:ring-orange-400">
-          &#8594;
-        </button>
-
-        <div id="icon-carousel" class="h-full flex flex-col justify-center items-center px-8">
-          <div class="icon-item hidden" role="group" aria-roledescription="slide" aria-label="Oferta EPIs">
-            <img src="epis.png" alt="EPIs" class="w-16 h-16 mx-auto mb-4" loading="lazy" />
-            <p class="font-semibold text-[#0a1e3a]">EPIs</p>
-            <p class="text-gray-600 text-sm mt-2">Trabalhamos com toda a linha de EPIs para atender a sua empresa. Equipamentos de proteção individual para segurança e conforto.</p>
-          </div>
-          <div class="icon-item hidden" role="group" aria-roledescription="slide" aria-label="Oferta Mangueiras e Mangotes">
-            <img src="mangueiras.png" alt="Mangueiras e Mangotes" class="w-16 h-16 mx-auto mb-4" loading="lazy" />
-            <p class="font-semibold text-[#0a1e3a]">Mangueiras e Mangotes</p>
-            <p class="text-gray-600 text-sm mt-2">Temos a linha de mangueiras e mangotes para a sua necessidade. Produtos resistentes e ideais para seu uso.</p>
-          </div>
-          <div class="icon-item hidden" role="group" aria-roledescription="slide" aria-label="Oferta Ferramentas e Compressores">
-            <img src="compressores.png" alt="Ferramentas e Compressores" class="w-16 h-16 mx-auto mb-4" loading="lazy" />
-            <p class="font-semibold text-[#0a1e3a]">Ferramentas e Compressores</p>
-            <p class="text-gray-600 text-sm mt-2">Trabalhamos com toda linha de ferramentas e equipamentos (compressores, roçadeiras, furadeiras e etc). Ferramentas elétricas, pneumáticas e compressores de ar.</p>
-          </div>
-          <div class="icon-item hidden" role="group" aria-roledescription="slide" aria-label="Oferta Serviços">
-            <img src="serviços.png" alt="Serviços" class="w-16 h-16 mx-auto mb-4"
-
-  <!-- Rodapé -->
-<footer class="bg-[#0a1e3a] text-white py-8 mt-12">
-  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-
-    <!-- Contato -->
-    <div>
-      <h3 class="font-bold text-lg mb-4">Contato</h3>
-      <p>Rua Exemplo, 123 - Catalão, GO</p>
-      <p>Telefone: (64) 99946-6730</p>
-      <p>Email: contato@catalaoborrachas.com.br</p>
     </div>
 
-    <!-- Redes Sociais -->
-    <div>
-      <h3 class="font-bold text-lg mb-4">Redes Sociais</h3>
-      <div class="flex space-x-6">
-        <a href="https://www.facebook.com/catalaoborrachas" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="hover:text-orange-400 transition">
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879v-6.987H7.898v-2.892h2.54v-2.21c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.883h2.773l-.443 2.892h-2.33v6.987C18.343 21.128 22 16.991 22 12z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/catalaoborrachas" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="hover:text-orange-400 transition">
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M7.75 2h8.5C19.55 2 22 4.45 22 7.75v8.5c0 3.3-2.45 5.75-5.75 5.75h-8.5C4.45 22 2 19.55 2 16.25v-8.5C2 4.45 4.45 2 7.75 2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/company/catalao-borrachas" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:text-orange-400 transition">
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M4.98 3.5C3.33 3.5 2 4.82 2 6.47c0 1.65 1.33 2.97 2.98 2.97 1.65 0 2.97-1.32 2.97-2.97 0-1.65-1.32-2.97-2.97-2.97zM2.4 8.88h5.13v12.12H2.4zM9.73 8.88h4.91v1.66h.07c.68-1.3 2.34-2.68 4.81-2.68 5.15 0 6.1 3.39 6.1 7.79v8.35h-5.13v-7.4c0-1.76-.03-4.02-2.45-4.02-2.46 0-2.84 1.92-2.84 3.9v7.52h-5.12z"/></svg>
-        </a>
+    <!-- Card Ícones com Descrição -->
+    <div class="bg-gray-100 rounded-xl shadow-lg p-6 relative text-center" style="height: 320px;">
+      <h2 class="text-xl font-bold text-[#0a1e3a] mb-4">O que oferecemos</h2>
+
+      <button id="prevIcon" aria-label="Anterior ícone" class="absolute top-1/2 left-3 -translate-y-1/2 bg-[#0a1e3a] text-white p-2 rounded-full hover:bg-orange-500 transition">
+        &#8592;
+      </button>
+      <button id="nextIcon" aria-label="Próximo ícone" class="absolute top-1/2 right-3 -translate-y-1/2 bg-[#0a1e3a] text-white p-2 rounded-full hover:bg-orange-500 transition">
+        &#8594;
+      </button>
+
+      <div id="icon-carousel" class="h-full flex flex-col justify-center items-center px-12">
+        <div class="icon-item hidden">
+          <img src="epis.png" alt="EPIs" class="w-16 h-16 mx-auto mb-4" />
+          <p class="font-semibold text-[#0a1e3a]">EPIs</p>
+          <p class="text-gray-600 text-sm mt-2">Trabalhamos com toda a linha de EPIs para atender a sua empresa. Equipamentos de proteção individual para segurança e conforto.</p>
+        </div>
+        <div class="icon-item hidden">
+          <img src="mangueiras.png" alt="Mangueiras e Mangotes" class="w-16 h-16 mx-auto mb-4" />
+          <p class="font-semibold text-[#0a1e3a]">Mangueiras e Mangotes</p>
+          <p class="text-gray-600 text-sm mt-2">Temos a linha de mangueiras e mangotes para a sua necessidade. Produtos resistentes e ideais para seu uso.</p>
+        </div>
+        <div class="icon-item hidden">
+          <img src="compressores.png" alt="Ferramentas e Compressores" class="w-16 h-16 mx-auto mb-4" />
+          <p class="font-semibold text-[#0a1e3a]">Ferramentas e Compressores</p>
+          <p class="text-gray-600 text-sm mt-2">Trabalhamos com toda linha de ferramentas e equipamentos (compressores, roçadeiras, furadeiras e etc). Ferramentas elétricas, pneumáticas e compressores de ar.</p>
+        </div>
+        <div class="icon-item hidden">
+          <img src="serviços.png" alt="Serviços" class="w-16 h-16 mx-auto mb-4" />
+          <p class="font-semibold text-[#0a1e3a]">Serviços</p>
+          <p class="text-gray-600 text-sm mt-2">Oferecemos serviços de prensa para mangueiras, manutenção de compressores, manutenção de roçadeiras, manutenção de betoneiras. Assistência técnica autorizada GAMMA. Assistência técnica e soluções personalizadas em Catalão.</p>
+        </div>
       </div>
     </div>
-
-    <!-- Voltar ao topo -->
-    <div class="flex flex-col items-center justify-center">
-      <button id="btn-top" class="bg-orange-500 hover:bg-orange-600 transition text-white px-6 py-3 rounded-lg font-semibold shadow-lg">
-        ↑ Voltar ao topo
-      </button>
-    </div>
-
   </div>
-  <p class="text-center text-gray-400 mt-6 text-sm">© 2025 Catalão Borrachas. Todos os direitos reservados.</p>
-</footer>
+</section>
 
 <script>
-  // Scroll suave ao topo
-  document.getElementById('btn-top').addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Depoimentos
+  const testimonials = document.querySelectorAll('#testimonial-carousel .testimonial-item');
+  let currentTestimonial = 0;
+  function showTestimonial(index) {
+    testimonials.forEach((el, i) => el.classList.toggle('hidden', i !== index));
+  }
+  showTestimonial(currentTestimonial);
+  document.getElementById('prevTestimonial').addEventListener('click', () => {
+    currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+    showTestimonial(currentTestimonial);
+  });
+  document.getElementById('nextTestimonial').addEventListener('click', () => {
+    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+    showTestimonial(currentTestimonial);
+  });
+
+  // Ícones
+  const icons = document.querySelectorAll('#icon-carousel .icon-item');
+  let currentIcon = 0;
+  function showIcon(index) {
+    icons.forEach((el, i) => el.classList.toggle('hidden', i !== index));
+  }
+  showIcon(currentIcon);
+  document.getElementById('prevIcon').addEventListener('click', () => {
+    currentIcon = (currentIcon - 1 + icons.length) % icons.length;
+    showIcon(currentIcon);
+  });
+  document.getElementById('nextIcon').addEventListener('click', () => {
+    currentIcon = (currentIcon + 1) % icons.length;
+    showIcon(currentIcon);
   });
 </script>
+
+<!-- Seção Nossos Fornecedores -->
+<section class="bg-white py-12 px-4">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-2xl font-bold text-center mb-8 text-[#0a1e3a]">Nossos Fornecedores</h2>
+    
+    <div class="relative group">
+      <!-- Setinha esquerda -->
+      <button
+        id="scrollLeft"
+        class="absolute left-0 top-1/2 -translate-y-1/2 bg-white border rounded-full shadow p-2 z-10 opacity-0 group-hover:opacity-100 transition-opacity"
+        aria-label="Scroll Left"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#0a1e3a]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <!-- Carrossel de fornecedores -->
+      <div
+        id="fornecedoresCarousel"
+        class="flex overflow-x-auto space-x-6 py-4 px-6 scrollbar-hide scroll-smooth"
+      >
+        <img src="1.png" alt="Fornecedor 1" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
+        <img src="2.png" alt="Fornecedor 2" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
+        <img src="3.png" alt="Fornecedor 3" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
+        <img src="4.png" alt="Fornecedor 4" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
+        <img src="5.png" alt="Fornecedor 5" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
+        <img src="6.png" alt="Fornecedor 6" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
+        <img src="7.png" alt="Fornecedor 7" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
+        <img src="8.png" alt="Fornecedor 8" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
+        <img src="10.png" alt="Fornecedor 10" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
+        <img src="11.png" alt="Fornecedor 11" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
+        <img src="12.png" alt="Fornecedor 12" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
+        <img src="13.png" alt="Fornecedor 13" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
+        <img src="14.png" alt="Fornecedor 14" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
+        <img src="15.png" alt="Fornecedor 15" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
+        <img src="16.png" alt="Fornecedor 16" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
+        <img src="17.png" alt="Fornecedor 17" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
+        <img src="18.png" alt="Fornecedor 18" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
+        <img src="19.png" alt="Fornecedor 19" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
+        <img src="20.png" alt="Fornecedor 20" class="h-24 w-auto flex-shrink-0 rounded-lg shadow-md hover:scale-105 transform transition" />
+      </div>
+
+      <!-- Setinha direita -->
+      <button
+        id="scrollRight"
+        class="absolute right-0 top-1/2 -translate-y-1/2 bg-white border rounded-full shadow p-2 z-10 opacity-0 group-hover:opacity-100 transition-opacity"
+        aria-label="Scroll Right"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#0a1e3a]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Esconde a barra de rolagem */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
+
+<script>
+  const carousel = document.getElementById('fornecedoresCarousel');
+  const scrollLeft = document.getElementById('scrollLeft');
+  const scrollRight = document.getElementById('scrollRight');
+
+  scrollLeft.addEventListener('click', () => {
+    carousel.scrollBy({ left: -200, behavior: 'smooth' });
+  });
+
+  scrollRight.addEventListener('click', () => {
+    carousel.scrollBy({ left: 200, behavior: 'smooth' });
+  });
+</script>
+
+
+</body>
+</html>
