@@ -23,7 +23,7 @@
       scrollbar-width: none;
     }
 
-    /* Animação sublinhado degradê laranja */
+    /* Animação sublinhado degradê amarelo */
     @keyframes gradientMove {
       0% { background-position: 0% 50%; }
       100% { background-position: 200% 50%; }
@@ -33,7 +33,7 @@
       animation: gradientMove 4s linear infinite;
     }
 
-    /* Fundo animado só com tons de azul */
+    /* Fundo animado só com tons de azul para a seção apresentação */
     @keyframes gradienteAzul {
       0%, 100% {
         background-position: 0% 50%;
@@ -42,7 +42,6 @@
         background-position: 100% 50%;
       }
     }
-
     .bg-animado {
       background: linear-gradient(270deg, 
         #0f172a 0%,       /* azul escuro */
@@ -52,11 +51,30 @@
       background-size: 200% 200%;
       animation: gradienteAzul 40s ease-in-out infinite;
     }
+
+    /* Estilos do cabeçalho com detalhes amarelos */
+    header {
+      background-color: #0a1e3a;
+    }
+    header a:hover {
+      color: #fbbf24; /* amarelo-400 */
+    }
+    header .bg-yellow {
+      background-color: #fbbf24;
+    }
+    header .bg-yellow:hover {
+      background-color: #f59e0b; /* amarelo-500 */
+    }
+    header .underline-yellow {
+      background: linear-gradient(to right, #fde68a, #fbbf24, #f59e0b);
+      background-size: 300%;
+      animation: gradientMove 4s linear infinite;
+    }
   </style>
 </head>
 <body>
 
-<header class="bg-[#0a1e3a] text-white py-4 shadow-md sticky top-0 z-50 font-[Poppins]">
+<header class="text-white py-4 shadow-md sticky top-0 z-50 font-[Poppins]">
   <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
     <!-- Logo + Título -->
     <div class="flex items-center space-x-4">
@@ -64,28 +82,26 @@
       <h1 class="text-2xl sm:text-3xl font-bold relative text-white">
         Catalão Borrachas
         <span
-          class="absolute left-0 -bottom-1 w-full h-[2px] rounded-full
-                 bg-gradient-to-r from-blue-400 via-blue-600 to-blue-500
-                 bg-[length:300%] animate-gradientMove"></span>
+          class="absolute left-0 -bottom-1 w-full h-[2px] rounded-full underline-yellow"></span>
       </h1>
     </div>
 
     <!-- Menu Desktop -->
     <nav class="hidden md:flex items-center space-x-6 text-sm sm:text-base">
-      <a href="#" class="hover:text-blue-400 transition">Home</a>
-      <a href="#produtos" class="hover:text-blue-400 transition">Produtos</a>
-      <a href="#servicos" class="hover:text-blue-400 transition">Serviços</a>
-      <a href="#depoimentos" class="hover:text-blue-400 transition">Depoimentos</a>
+      <a href="#" class="hover:text-yellow-400 transition">Home</a>
+      <a href="#produtos" class="hover:text-yellow-400 transition">Produtos</a>
+      <a href="#servicos" class="hover:text-yellow-400 transition">Serviços</a>
+      <a href="#depoimentos" class="hover:text-yellow-400 transition">Depoimentos</a>
       <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
          target="_blank" rel="noopener noreferrer"
-         class="bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition text-sm sm:text-base">
+         class="bg-yellow-400 text-black px-3 py-2 rounded-lg hover:bg-yellow-500 transition text-sm sm:text-base">
         Solicite seu Orçamento
       </a>
     </nav>
 
     <!-- Botão hambúrguer Mobile -->
     <button id="menu-toggle" aria-label="Abrir menu"
-      class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+      class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded">
       <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar1"></span>
       <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar2"></span>
       <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar3"></span>
@@ -93,14 +109,14 @@
   </div>
 
   <!-- Menu Mobile -->
-  <nav id="mobile-menu" class="md:hidden hidden px-4 pb-6 space-y-3 bg-[#0a1e3a] border-t border-blue-600">
-    <a href="#" class="block text-white hover:text-blue-400 transition py-2 border-b border-transparent hover:border-blue-400">Home</a>
-    <a href="#produtos" class="block text-white hover:text-blue-400 transition py-2 border-b border-transparent hover:border-blue-400">Produtos</a>
-    <a href="#servicos" class="block text-white hover:text-blue-400 transition py-2 border-b border-transparent hover:border-blue-400">Serviços</a>
-    <a href="#depoimentos" class="block text-white hover:text-blue-400 transition py-2 border-b border-transparent hover:border-blue-400">Depoimentos</a>
+  <nav id="mobile-menu" class="md:hidden hidden px-4 pb-6 space-y-3 bg-[#0a1e3a] border-t border-yellow-400">
+    <a href="#" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Home</a>
+    <a href="#produtos" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Produtos</a>
+    <a href="#servicos" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Serviços</a>
+    <a href="#depoimentos" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Depoimentos</a>
     <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
        target="_blank" rel="noopener noreferrer"
-       class="block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-center">
+       class="block bg-yellow-400 text-black px-4 py-2 rounded-lg hover:bg-yellow-500 transition text-center">
       Solicite seu Orçamento
     </a>
   </nav>
@@ -123,7 +139,7 @@
   </script>
 </header>
 
-<!-- Seção Apresentação com fundo animado -->
+<!-- Seção Apresentação com fundo animado só azul -->
 <section class="relative bg-animado h-[50vh] sm:h-[70vh] md:h-[80vh] flex items-center justify-start px-4 sm:px-10 md:px-20">
   <!-- Sobreposição escura -->
   <div class="absolute inset-0 bg-black/40"></div>
@@ -138,6 +154,7 @@
 
 </body>
 </html>
+
 
 
 
