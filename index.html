@@ -22,45 +22,48 @@
 </head>
 <body class="bg-[#0a1e3a] text-white">
 
-  <!-- Cabeçalho -->
-  <header class="bg-[#0a1e3a] shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <h1 class="text-xl sm:text-2xl font-bold leading-tight">Catalão Borrachas</h1>
-
-      <!-- Menu Desktop -->
-      <nav class="hidden md:flex items-center space-x-6 text-sm sm:text-base">
-        <a href="#" class="hover:text-orange-400 transition">Home</a>
-        <a href="#produtos" class="hover:text-orange-400 transition">Produtos</a>
-        <a href="#servicos" class="hover:text-orange-400 transition">Serviços</a>
-        <a href="#depoimentos" class="hover:text-orange-400 transition">Depoimentos</a>
-        <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
-           target="_blank" rel="noopener noreferrer"
-           class="bg-orange-500 text-white px-3 py-2 rounded-lg hover:bg-orange-600 transition text-sm sm:text-base">
-          Solicite seu Orçamento
-        </a>
-      </nav>
-
-      <!-- Botão hamburguer Mobile -->
-      <button id="menu-toggle" aria-label="Abrir menu" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none focus:ring-2 focus:ring-orange-500 rounded">
-        <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar1"></span>
-        <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar2"></span>
-        <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar3"></span>
-      </button>
+ <header class="bg-[#0a1e3a] shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+      <img src="logo.png" alt="Logo Catalão Borrachas" class="w-10 h-10 object-contain" />
+      <h1 class="text-xl sm:text-2xl font-bold leading-tight text-white">Catalão Borrachas</h1>
     </div>
 
-    <!-- Menu Mobile -->
-    <nav id="mobile-menu" class="md:hidden hidden px-4 pb-6 space-y-3 bg-[#0a1e3a] border-t border-orange-500">
-      <a href="#" class="block text-white hover:text-orange-400 transition py-2 border-b border-transparent hover:border-orange-400">Home</a>
-      <a href="#produtos" class="block text-white hover:text-orange-400 transition py-2 border-b border-transparent hover:border-orange-400">Produtos</a>
-      <a href="#servicos" class="block text-white hover:text-orange-400 transition py-2 border-b border-transparent hover:border-orange-400">Serviços</a>
-      <a href="#depoimentos" class="block text-white hover:text-orange-400 transition py-2 border-b border-transparent hover:border-orange-400">Depoimentos</a>
+    <!-- Menu Desktop -->
+    <nav class="hidden md:flex items-center space-x-6 text-sm sm:text-base">
+      <a href="#" class="hover:text-orange-400 transition">Home</a>
+      <a href="#produtos" class="hover:text-orange-400 transition">Produtos</a>
+      <a href="#servicos" class="hover:text-orange-400 transition">Serviços</a>
+      <a href="#depoimentos" class="hover:text-orange-400 transition">Depoimentos</a>
       <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
          target="_blank" rel="noopener noreferrer"
-         class="block bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition text-center">
+         class="bg-orange-500 text-white px-3 py-2 rounded-lg hover:bg-orange-600 transition text-sm sm:text-base">
         Solicite seu Orçamento
       </a>
     </nav>
-  </header>
+
+    <!-- Botão hamburguer Mobile -->
+    <button id="menu-toggle" aria-label="Abrir menu" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none focus:ring-2 focus:ring-orange-500 rounded">
+      <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar1"></span>
+      <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar2"></span>
+      <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar3"></span>
+    </button>
+  </div>
+
+  <!-- Menu Mobile -->
+  <nav id="mobile-menu" class="md:hidden hidden px-4 pb-6 space-y-3 bg-[#0a1e3a] border-t border-orange-500">
+    <a href="#" class="block text-white hover:text-orange-400 transition py-2 border-b border-transparent hover:border-orange-400">Home</a>
+    <a href="#produtos" class="block text-white hover:text-orange-400 transition py-2 border-b border-transparent hover:border-orange-400">Produtos</a>
+    <a href="#servicos" class="block text-white hover:text-orange-400 transition py-2 border-b border-transparent hover:border-orange-400">Serviços</a>
+    <a href="#depoimentos" class="block text-white hover:text-orange-400 transition py-2 border-b border-transparent hover:border-orange-400">Depoimentos</a>
+    <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
+       target="_blank" rel="noopener noreferrer"
+       class="block bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition text-center">
+      Solicite seu Orçamento
+    </a>
+  </nav>
+</header>
+
 
   <!-- Script do Menu -->
   <script>
