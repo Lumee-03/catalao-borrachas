@@ -33,8 +33,8 @@
       animation: gradientMove 4s linear infinite;
     }
 
-    /* Fundo animado minimalista, lento e com degrade azul-laranja */
-    @keyframes gradienteAzulLaranja {
+    /* Fundo animado só com tons de azul */
+    @keyframes gradienteAzul {
       0%, 100% {
         background-position: 0% 50%;
       }
@@ -45,12 +45,12 @@
 
     .bg-animado {
       background: linear-gradient(270deg, 
-        #0f172a 0%,      /* azul escuro */
-        #2563eb 45%,     /* azul vibrante */
-        #f97316 55%,     /* laranja */
+        #0f172a 0%,       /* azul escuro */
+        #2563eb 45%,      /* azul vibrante */
+        #3b82f6 55%,      /* azul médio */
         #0f172a 100%);
       background-size: 200% 200%;
-      animation: gradienteAzulLaranja 40s ease-in-out infinite;
+      animation: gradienteAzul 40s ease-in-out infinite;
     }
   </style>
 </head>
@@ -65,27 +65,27 @@
         Catalão Borrachas
         <span
           class="absolute left-0 -bottom-1 w-full h-[2px] rounded-full
-                 bg-gradient-to-r from-orange-300 via-orange-500 to-orange-400
+                 bg-gradient-to-r from-blue-400 via-blue-600 to-blue-500
                  bg-[length:300%] animate-gradientMove"></span>
       </h1>
     </div>
 
     <!-- Menu Desktop -->
     <nav class="hidden md:flex items-center space-x-6 text-sm sm:text-base">
-      <a href="#" class="hover:text-orange-400 transition">Home</a>
-      <a href="#produtos" class="hover:text-orange-400 transition">Produtos</a>
-      <a href="#servicos" class="hover:text-orange-400 transition">Serviços</a>
-      <a href="#depoimentos" class="hover:text-orange-400 transition">Depoimentos</a>
+      <a href="#" class="hover:text-blue-400 transition">Home</a>
+      <a href="#produtos" class="hover:text-blue-400 transition">Produtos</a>
+      <a href="#servicos" class="hover:text-blue-400 transition">Serviços</a>
+      <a href="#depoimentos" class="hover:text-blue-400 transition">Depoimentos</a>
       <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
          target="_blank" rel="noopener noreferrer"
-         class="bg-orange-500 text-white px-3 py-2 rounded-lg hover:bg-orange-600 transition text-sm sm:text-base">
+         class="bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition text-sm sm:text-base">
         Solicite seu Orçamento
       </a>
     </nav>
 
     <!-- Botão hambúrguer Mobile -->
     <button id="menu-toggle" aria-label="Abrir menu"
-      class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none focus:ring-2 focus:ring-orange-500 rounded">
+      class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
       <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar1"></span>
       <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar2"></span>
       <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar3"></span>
@@ -93,14 +93,14 @@
   </div>
 
   <!-- Menu Mobile -->
-  <nav id="mobile-menu" class="md:hidden hidden px-4 pb-6 space-y-3 bg-[#0a1e3a] border-t border-orange-500">
-    <a href="#" class="block text-white hover:text-orange-400 transition py-2 border-b border-transparent hover:border-orange-400">Home</a>
-    <a href="#produtos" class="block text-white hover:text-orange-400 transition py-2 border-b border-transparent hover:border-orange-400">Produtos</a>
-    <a href="#servicos" class="block text-white hover:text-orange-400 transition py-2 border-b border-transparent hover:border-orange-400">Serviços</a>
-    <a href="#depoimentos" class="block text-white hover:text-orange-400 transition py-2 border-b border-transparent hover:border-orange-400">Depoimentos</a>
+  <nav id="mobile-menu" class="md:hidden hidden px-4 pb-6 space-y-3 bg-[#0a1e3a] border-t border-blue-600">
+    <a href="#" class="block text-white hover:text-blue-400 transition py-2 border-b border-transparent hover:border-blue-400">Home</a>
+    <a href="#produtos" class="block text-white hover:text-blue-400 transition py-2 border-b border-transparent hover:border-blue-400">Produtos</a>
+    <a href="#servicos" class="block text-white hover:text-blue-400 transition py-2 border-b border-transparent hover:border-blue-400">Serviços</a>
+    <a href="#depoimentos" class="block text-white hover:text-blue-400 transition py-2 border-b border-transparent hover:border-blue-400">Depoimentos</a>
     <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
        target="_blank" rel="noopener noreferrer"
-       class="block bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition text-center">
+       class="block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-center">
       Solicite seu Orçamento
     </a>
   </nav>
@@ -138,7 +138,6 @@
 
 </body>
 </html>
-
 
 
 
