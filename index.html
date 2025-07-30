@@ -13,6 +13,7 @@
       background-color: #0a1e3a;
       color: white;
     }
+
     /* Esconde a barra de rolagem no carrossel */
     .scrollbar-hide::-webkit-scrollbar {
       display: none;
@@ -21,6 +22,7 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
+
     /* Animação sublinhado degradê laranja */
     @keyframes gradientMove {
       0% { background-position: 0% 50%; }
@@ -29,6 +31,21 @@
     .animate-gradientMove {
       background-size: 300%;
       animation: gradientMove 4s linear infinite;
+    }
+
+    /* Animação de fundo gradiente */
+    @keyframes gradiente {
+      0%, 100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+    .bg-animado {
+      background: linear-gradient(-45deg, #1e293b, #334155, #475569, #1e40af);
+      background-size: 400% 400%;
+      animation: gradiente 10s ease infinite;
     }
   </style>
 </head>
@@ -49,17 +66,17 @@
     </div>
 
     <!-- Menu Desktop -->
-<nav class="hidden md:flex items-center space-x-6 text-sm sm:text-base">
-  <a href="#" class="hover:text-orange-400 transition">Home</a>
-  <a href="#produtos" class="hover:text-orange-400 transition">Produtos</a>
-  <a href="#servicos" class="hover:text-orange-400 transition">Serviços</a>
-  <a href="#depoimentos" class="hover:text-orange-400 transition">Depoimentos</a>
-  <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
-     target="_blank" rel="noopener noreferrer"
-     class="bg-orange-500 text-white px-3 py-2 rounded-lg hover:bg-orange-600 transition text-sm sm:text-base">
-    Solicite seu Orçamento
-  </a>
-</nav>
+    <nav class="hidden md:flex items-center space-x-6 text-sm sm:text-base">
+      <a href="#" class="hover:text-orange-400 transition">Home</a>
+      <a href="#produtos" class="hover:text-orange-400 transition">Produtos</a>
+      <a href="#servicos" class="hover:text-orange-400 transition">Serviços</a>
+      <a href="#depoimentos" class="hover:text-orange-400 transition">Depoimentos</a>
+      <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
+         target="_blank" rel="noopener noreferrer"
+         class="bg-orange-500 text-white px-3 py-2 rounded-lg hover:bg-orange-600 transition text-sm sm:text-base">
+        Solicite seu Orçamento
+      </a>
+    </nav>
 
     <!-- Botão hambúrguer Mobile -->
     <button id="menu-toggle" aria-label="Abrir menu"
@@ -70,18 +87,18 @@
     </button>
   </div>
 
- <!-- Menu Mobile -->
-<nav id="mobile-menu" class="md:hidden hidden px-4 pb-6 space-y-3 bg-[#0a1e3a] border-t border-orange-500">
-  <a href="#" class="block text-white hover:text-orange-400 transition py-2 border-b border-transparent hover:border-orange-400">Home</a>
-  <a href="#produtos" class="block text-white hover:text-orange-400 transition py-2 border-b border-transparent hover:border-orange-400">Produtos</a>
-  <a href="#servicos" class="block text-white hover:text-orange-400 transition py-2 border-b border-transparent hover:border-orange-400">Serviços</a>
-  <a href="#depoimentos" class="block text-white hover:text-orange-400 transition py-2 border-b border-transparent hover:border-orange-400">Depoimentos</a>
-  <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
-     target="_blank" rel="noopener noreferrer"
-     class="block bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition text-center">
-    Solicite seu Orçamento
-  </a>
-</nav>
+  <!-- Menu Mobile -->
+  <nav id="mobile-menu" class="md:hidden hidden px-4 pb-6 space-y-3 bg-[#0a1e3a] border-t border-orange-500">
+    <a href="#" class="block text-white hover:text-orange-400 transition py-2 border-b border-transparent hover:border-orange-400">Home</a>
+    <a href="#produtos" class="block text-white hover:text-orange-400 transition py-2 border-b border-transparent hover:border-orange-400">Produtos</a>
+    <a href="#servicos" class="block text-white hover:text-orange-400 transition py-2 border-b border-transparent hover:border-orange-400">Serviços</a>
+    <a href="#depoimentos" class="block text-white hover:text-orange-400 transition py-2 border-b border-transparent hover:border-orange-400">Depoimentos</a>
+    <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
+       target="_blank" rel="noopener noreferrer"
+       class="block bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition text-center">
+      Solicite seu Orçamento
+    </a>
+  </nav>
 
   <script>
     const toggle = document.getElementById('menu-toggle');
@@ -92,59 +109,28 @@
 
     toggle.addEventListener('click', () => {
       menu.classList.toggle('hidden');
-
-      // Animação do botão hambúrguer → X
       bar1.classList.toggle('rotate-45');
       bar1.classList.toggle('translate-y-2');
-
       bar2.classList.toggle('opacity-0');
-
       bar3.classList.toggle('-rotate-45');
       bar3.classList.toggle('-translate-y-2');
     });
   </script>
 </header>
 
+<!-- Seção Apresentação com fundo animado -->
+<section class="relative bg-animado h-[50vh] sm:h-[70vh] md:h-[80vh] flex items-center justify-start px-4 sm:px-10 md:px-20">
+  <!-- Sobreposição escura -->
+  <div class="absolute inset-0 bg-black/40"></div>
 
+  <!-- Texto sobre o fundo -->
+  <div class="relative z-10">
+    <h2 class="text-white text-xl sm:text-3xl md:text-5xl font-bold max-w-xl sm:max-w-3xl leading-snug drop-shadow-lg">
+      Tudo em EPIs, Borrachas, Mangueiras e Assistência Técnica em Catalão
+    </h2>
+  </div>
+</section>
 
-
-  <!-- Script do Menu -->
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('mobile-menu');
-    const bar1 = document.getElementById('bar1');
-    const bar2 = document.getElementById('bar2');
-    const bar3 = document.getElementById('bar3');
-
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-
-      // Animação do botão hambúrguer → X
-      bar1.classList.toggle('rotate-45');
-      bar1.classList.toggle('translate-y-2');
-
-      bar2.classList.toggle('opacity-0');
-
-      bar3.classList.toggle('-rotate-45');
-      bar3.classList.toggle('-translate-y-2');
-    });
-  </script>
-
-  <!-- Seção Apresentação -->
-  <section class="relative">
-    <!-- Imagem de fundo -->
-    <img src="foto1.png" alt="Imagem de fundo" class="w-full h-[50vh] sm:h-[70vh] md:h-[80vh] object-cover" />
-
-    <!-- Sobreposição escura -->
-    <div class="absolute inset-0 bg-black/60"></div>
-
-    <!-- Texto sobre a imagem -->
-    <div class="absolute inset-0 flex items-center justify-start px-4 sm:px-10 md:px-20">
-      <h2 class="text-white text-xl sm:text-3xl md:text-5xl font-bold max-w-xl sm:max-w-3xl leading-snug drop-shadow-lg">
-        Tudo em EPIs, Borrachas, Mangueiras e Assistência Técnica em Catalão
-      </h2>
-    </div>
-  </section>
 
   <!-- Seção de Cards -->
   <section class="bg-white py-10 sm:py-12" id="produtos">
