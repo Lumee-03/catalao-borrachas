@@ -8,6 +8,12 @@
   <!-- Fonte Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0a1e3a;
+      color: white;
+    }
+
     /* Estilos do cabeçalho com detalhes amarelos */
     header {
       background-color: #0a1e3a;
@@ -33,25 +39,25 @@
       100% { background-position: 200% 50%; }
     }
 
-    /* Fundo animado azul */
-    @keyframes gradienteAzul {
-      0%, 100% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
+    /* Menu mobile */
+    #mobile-menu {
+      display: none;
     }
-    .bg-animado {
-      background: linear-gradient(270deg, 
-        #0f172a 0%,       /* azul escuro */
-        #2563eb 45%,      /* azul vibrante */
-        #3b82f6 55%,      /* azul médio */
-        #0f172a 100%);
-      background-size: 200% 200%;
-      animation: gradienteAzul 40s ease-in-out infinite;
+    .hidden {
+      display: none;
     }
 
+    /* Estilo do menu */
+    nav a {
+      color: white;
+      padding: 10px 20px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fbbf24;
+    }
+    
     /* Rodapé */
     footer {
       background-color: #0a1e3a;
@@ -66,17 +72,6 @@
 
     footer a:hover {
       color: #f59e0b;
-    }
-
-    /* Estilo do menu de navegação no cabeçalho */
-    nav a {
-      color: white;
-      padding: 10px 20px;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #fbbf24;
     }
 
     /* Ajustes de layout */
@@ -133,8 +128,21 @@
       <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar3"></span>
     </button>
   </div>
-</header>
 
+  <!-- Menu Mobile -->
+  <nav id="mobile-menu" class="md:hidden hidden px-4 pb-6 space-y-3 bg-[#0a1e3a] border-t border-yellow-400">
+    <a href="#produtos" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Produtos</a>
+    <a href="#servicos" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Serviços</a>
+    <a href="#depoimentos" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Depoimentos</a>
+    <a href="#contato" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Contatos</a>
+    <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
+       target="_blank" rel="noopener noreferrer"
+       class="block bg-yellow-400 text-black px-4 py-2 rounded-lg hover:bg-yellow-500 transition text-center">
+      Solicite seu Orçamento
+    </a>
+  </nav>
+
+</header>
 
 
 <!-- Seção Apresentação com fundo animado só azul -->
