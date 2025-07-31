@@ -508,6 +508,62 @@
   </footer>
 
 
+<script>
+  const items = document.querySelectorAll('.icon-item');
+  const nextBtn = document.getElementById('nextIcon');
+  const prevBtn = document.getElementById('prevIcon');
+
+  let current = 0;
+
+  function showItem(index) {
+    items.forEach((item, i) => {
+      item.classList.toggle('hidden', i !== index);
+    });
+  }
+
+  function nextItem() {
+    current = (current + 1) % items.length;
+    showItem(current);
+  }
+
+  function prevItem() {
+    current = (current - 1 + items.length) % items.length;
+    showItem(current);
+  }
+
+  nextBtn.addEventListener('click', nextItem);
+  prevBtn.addEventListener('click', prevItem);
+
+  // Mostrar o primeiro item ao carregar
+  showItem(current);
+
+  // Swipe no celular
+  const carousel = document.getElementById('icon-carousel');
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  carousel.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  carousel.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const diff = touchStartX - touchEndX;
+    const threshold = 50; // Sensibilidade mínima
+
+    if (diff > threshold) {
+      nextItem(); // deslizar para a esquerda → próximo
+    } else if (diff < -threshold) {
+      prevItem(); // deslizar para a direita → anterior
+    }
+  }
+</script>
+
+
   
 </body>
 </html>
