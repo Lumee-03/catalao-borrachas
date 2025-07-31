@@ -167,11 +167,33 @@
     <h2 class="text-white text-2xl sm:text-3xl md:text-5xl font-bold leading-snug drop-shadow-lg">
       Tudo em EPIs, borrachas, mangueiras e assistência técnica em Catalão
     </h2>
-    <p class="text-yellow-300 mt-4 text-xs sm:text-sm md:text-base font-normal leading-relaxed drop-shadow-md">
+
+    <!-- Botão para mostrar/ocultar o texto -->
+    <button id="toggleTextBtn" 
+            class="mt-6 flex items-center space-x-2 text-yellow-300 hover:text-yellow-400 font-medium focus:outline-none">
+      <svg id="icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+      <span>Ver mais detalhes</span>
+    </button>
+
+    <!-- Texto oculto inicialmente -->
+    <p id="extraText" class="text-yellow-300 mt-4 text-base font-normal leading-relaxed drop-shadow-md hidden">
       Ferramentas, EPIs, bombas, compressores, mangueiras, mangotes, serviço de prensa, assistência técnica de compressores e equipamentos, peças e componentes, correias.
     </p>
   </div>
 </section>
+
+<script>
+  const btn = document.getElementById('toggleTextBtn');
+  const text = document.getElementById('extraText');
+  const icon = document.getElementById('icon');
+
+  btn.addEventListener('click', () => {
+    text.classList.toggle('hidden');
+    icon.classList.toggle('rotate-180');
+  });
+</script>
 
 </body>
 </html>
