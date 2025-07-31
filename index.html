@@ -14,35 +14,64 @@
       color: white;
     }
 
+    /* Animação de sublinhado degradê amarelo */
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+    .animate-gradientMove {
+      background-size: 300%;
+      animation: gradientMove 4s linear infinite;
+    }
+
+    /* Degradê para a seção apresentação */
+    @keyframes gradienteAzul {
+      0%, 100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+
+    .bg-animado {
+      background: linear-gradient(270deg, 
+        #0f172a 0%,       /* azul escuro */
+        #2563eb 45%,      /* azul vibrante */
+        #3b82f6 55%,      /* azul médio */
+        #0f172a 100%);
+      background-size: 200% 200%;
+      animation: gradienteAzul 40s ease-in-out infinite;
+    }
+
     /* Estilos do cabeçalho com detalhes amarelos */
     header {
       background-color: #0a1e3a;
     }
+
     header a:hover {
       color: #fbbf24; /* amarelo-400 */
     }
+
     header .bg-yellow {
       background-color: #fbbf24;
     }
+
     header .bg-yellow:hover {
       background-color: #f59e0b; /* amarelo-500 */
     }
+
     header .underline-yellow {
       background: linear-gradient(to right, #fde68a, #fbbf24, #f59e0b);
       background-size: 300%;
       animation: gradientMove 4s linear infinite;
     }
 
-    /* Animação de sublinhado degradê amarelo */
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 200% 50%; }
-    }
-
     /* Menu mobile */
     #mobile-menu {
       display: none;
     }
+
     .hidden {
       display: none;
     }
@@ -57,8 +86,7 @@
     nav a:hover {
       color: #fbbf24;
     }
-    
-    /* Rodapé */
+
     footer {
       background-color: #0a1e3a;
       color: white;
@@ -143,7 +171,6 @@
   </nav>
 
 </header>
-
 
 <!-- Seção Apresentação com fundo animado só azul -->
 <section class="relative bg-animado h-[50vh] sm:h-[70vh] md:h-[80vh] flex items-center justify-start px-4 sm:px-10 md:px-20">
