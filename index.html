@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -8,24 +7,66 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Fonte Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-
   <style>
-    /* Efeito de fundo animado com degradê de azul */
+
+ .footer-container {
+      display: flex;
+      justify-content: center; /* Centraliza horizontalmente */
+      align-items: center; /* Centraliza verticalmente */
+      height: 400px; /* Altura do rodapé */
+      color: white;
+      gap: 40px; /* Adiciona espaço entre o mapa e as informações */
+    }
+
+    .footer-content {
+      max-width: 800px;  /* Limita a largura do conteúdo */
+      padding: 0 20px;   /* Espaçamento nas laterais */
+      margin-left: 40px; /* Adiciona margem à esquerda para afastar das informações */
+    }
+
+    .w-full.md\:w-1\/2 {
+      margin-right: 20px; /* Espaço para garantir que o mapa e as informações não se toquem */
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0a1e3a;
+      color: white;
+    }
+
+    /* Esconde a barra de rolagem no carrossel */
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Animação sublinhado degradê amarelo */
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+    .animate-gradientMove {
+      background-size: 300%;
+      animation: gradientMove 4s linear infinite;
+    }
+
+    /* Fundo animado só com tons de azul para a seção apresentação */
     @keyframes gradienteAzul {
       0%, 100% {
         background-position: 0% 50%;
       }
-
       50% {
         background-position: 100% 50%;
       }
     }
-
     .bg-animado {
-      background: linear-gradient(270deg,
-        #0f172a 0%, /* azul escuro */
-        #2563eb 45%, /* azul vibrante */
-        #3b82f6 55%, /* azul médio */
+      background: linear-gradient(270deg, 
+        #0f172a 0%,       /* azul escuro */
+        #2563eb 45%,      /* azul vibrante */
+        #3b82f6 55%,      /* azul médio */
         #0f172a 100%);
       background-size: 200% 200%;
       animation: gradienteAzul 40s ease-in-out infinite;
@@ -35,140 +76,88 @@
     header {
       background-color: #0a1e3a;
     }
-
     header a:hover {
-      color: #fbbf24;
+      color: #fbbf24; /* amarelo-400 */
     }
-
     header .bg-yellow {
       background-color: #fbbf24;
     }
-
     header .bg-yellow:hover {
-      background-color: #f59e0b;
+      background-color: #f59e0b; /* amarelo-500 */
     }
-
     header .underline-yellow {
       background: linear-gradient(to right, #fde68a, #fbbf24, #f59e0b);
       background-size: 300%;
       animation: gradientMove 4s linear infinite;
     }
-
-    /* Configurações para o menu */
-    #menu-toggle {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 21px;
-      width: 28px;
-      background: none;
-      border: none;
-    }
-
-    #menu-toggle span {
-      height: 4px;
-      background: white;
-      transition: all 0.3s ease;
-    }
-
-    /* Configuração para o menu mobile */
-    @media (max-width: 768px) {
-      #mobile-menu {
-        display: none;
-      }
-
-      #menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg);
-        transform-origin: 2px;
-      }
-
-      #menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-      }
-
-      #menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg);
-        transform-origin: 2px;
-      }
-
-      #mobile-menu.active {
-        display: block;
-      }
-    }
   </style>
-
 </head>
+<body>
 
-<body class="bg-[#0a1e3a] text-white">
-
-  <header class="text-white py-4 shadow-md sticky top-0 z-50 font-[Poppins]">
-    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
-      <!-- Logo + Título -->
-      <div class="flex items-center space-x-4">
-        <img src="logo.png" alt="Logo Catalão Borrachas" class="h-10 w-auto" />
-        <h1 class="text-2xl sm:text-3xl font-bold relative text-white">
-          Catalão Borrachas
-          <span class="absolute left-0 -bottom-1 w-full h-[2px] rounded-full underline-yellow"></span>
-        </h1>
-      </div>
-
-      <!-- Menu Desktop -->
-      <nav class="hidden md:flex items-center space-x-6 text-sm sm:text-base">
-        <a href="#" class="hover:text-yellow-400 transition">Home</a>
-        <a href="#produtos" class="hover:text-yellow-400 transition">Produtos</a>
-        <a href="#servicos" class="hover:text-yellow-400 transition">Serviços</a>
-        <a href="#depoimentos" class="hover:text-yellow-400 transition">Depoimentos</a>
-        <a href="#contato" class="hover:text-yellow-400 transition">Contatos</a>
-        <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
-           target="_blank" rel="noopener noreferrer"
-           class="bg-yellow-400 text-black px-3 py-2 rounded-lg hover:bg-yellow-500 transition text-sm sm:text-base">
-          Solicite seu Orçamento
-        </a>
-      </nav>
-
-      <!-- Botão hambúrguer Mobile -->
-      <button id="menu-toggle" aria-label="Abrir menu"
-        class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded">
-        <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
-        <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
-        <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
-      </button>
+<header class="text-white py-4 shadow-md sticky top-0 z-50 font-[Poppins]">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+    <!-- Logo + Título -->
+    <div class="flex items-center space-x-4">
+      <img src="logo.png" alt="Logo Catalão Borrachas" class="h-10 w-auto" />
+      <h1 class="text-2xl sm:text-3xl font-bold relative text-white">
+        Catalão Borrachas
+        <span
+          class="absolute left-0 -bottom-1 w-full h-[2px] rounded-full underline-yellow"></span>
+      </h1>
     </div>
 
-    <!-- Menu Mobile -->
-    <nav id="mobile-menu" class="md:hidden hidden px-4 pb-6 space-y-3 bg-[#0a1e3a] border-t border-yellow-400">
-      <a href="#" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Home</a>
-      <a href="#produtos" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Produtos</a>
-      <a href="#servicos" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Serviços</a>
-      <a href="#depoimentos" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Depoimentos</a>
-      <a href="#contato" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Contatos</a>
+    <!-- Menu Desktop -->
+    <nav class="hidden md:flex items-center space-x-6 text-sm sm:text-base">
+      <a href="#" class="hover:text-yellow-400 transition">Home</a>
+      <a href="#produtos" class="hover:text-yellow-400 transition">Produtos</a>
+      <a href="#servicos" class="hover:text-yellow-400 transition">Serviços</a>
+      <a href="#depoimentos" class="hover:text-yellow-400 transition">Depoimentos</a>
       <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
          target="_blank" rel="noopener noreferrer"
-         class="block bg-yellow-400 text-black px-4 py-2 rounded-lg hover:bg-yellow-500 transition text-center">
+         class="bg-yellow-400 text-black px-3 py-2 rounded-lg hover:bg-yellow-500 transition text-sm sm:text-base">
         Solicite seu Orçamento
       </a>
     </nav>
 
-    <script>
-      const toggle = document.getElementById('menu-toggle');
-      const menu = document.getElementById('mobile-menu');
+    <!-- Botão hambúrguer Mobile -->
+    <button id="menu-toggle" aria-label="Abrir menu"
+      class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded">
+      <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar1"></span>
+      <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar2"></span>
+      <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar3"></span>
+    </button>
+  </div>
 
-      toggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-        toggle.classList.toggle('active');
-      });
-    </script>
-  </header>
+  <!-- Menu Mobile -->
+  <nav id="mobile-menu" class="md:hidden hidden px-4 pb-6 space-y-3 bg-[#0a1e3a] border-t border-yellow-400">
+    <a href="#" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Home</a>
+    <a href="#produtos" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Produtos</a>
+    <a href="#servicos" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Serviços</a>
+    <a href="#depoimentos" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Depoimentos</a>
+    <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
+       target="_blank" rel="noopener noreferrer"
+       class="block bg-yellow-400 text-black px-4 py-2 rounded-lg hover:bg-yellow-500 transition text-center">
+      Solicite seu Orçamento
+    </a>
+  </nav>
 
-  <section class="relative bg-animado h-[50vh] sm:h-[70vh] md:h-[80vh] flex items-center justify-start px-4 sm:px-10 md:px-20">
-    <div class="absolute inset-0 bg-black/40"></div>
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const bar1 = document.getElementById('bar1');
+    const bar2 = document.getElementById('bar2');
+    const bar3 = document.getElementById('bar3');
 
-    <div class="relative z-10">
-      <h2 class="text-white text-xl sm:text-3xl md:text-5xl font-bold max-w-xl sm:max-w-3xl leading-snug drop-shadow-lg">
-        Tudo em EPIs, Borrachas, Mangueiras e Assistência Técnica em Catalão
-      </h2>
-    </div>
-  </section>
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      bar1.classList.toggle('rotate-45');
+      bar1.classList.toggle('translate-y-2');
+      bar2.classList.toggle('opacity-0');
+      bar3.classList.toggle('-rotate-45');
+      bar3.classList.toggle('-translate-y-2');
+    });
+  </script>
+</header>
 
 <!-- Seção Apresentação com fundo animado só azul -->
 <section class="relative bg-animado h-[50vh] sm:h-[70vh] md:h-[80vh] flex items-center justify-start px-4 sm:px-10 md:px-20">
@@ -462,33 +451,40 @@
   });
 </script>
 
-<!-- Seção Contatos -->
-  <footer class="bg-[#0a1e3a] text-white py-12 px-4" id="contato">
+ <!-- Rodapé com o mapa e as informações -->
+  <footer class="bg-footer text-white py-12 px-4">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
       <!-- Mapa com marcador OSM -->
       <div class="w-full md:w-1/2">
         <h3 class="text-2xl font-semibold mb-4">Nossa Localização</h3>
-        <iframe width="100%" height="300" frameborder="0" scrolling="no"
+        <iframe
+          width="100%"
+          height="300"
+          frameborder="0"
+          scrolling="no"
           src="https://www.openstreetmap.org/export/embed.html?bbox=-47.9235%2C-18.1435%2C-47.9145%2C-18.1370&marker=-18.1402954%2C-47.9189418"
-          style="border:1px solid #ccc;"></iframe>
-        <small><a href="https://www.openstreetmap.org/?mlat=-18.1402954&mlon=-47.9189418#map=16/-18.1403/-47.9189"
-            target="_blank" class="text-gray-300">Ver mapa maior</a></small>
+          style="border:1px solid #ccc;">
+        </iframe>
+        <small><a href="https://www.openstreetmap.org/?mlat=-18.1402954&mlon=-47.9189418#map=16/-18.1403/-47.9189" target="_blank" class="text-gray-300">Ver mapa maior</a></small>
       </div>
 
-      <!-- Informações da empresa -->
-      <div class="w-full md:w-1/2 text-center md:text-left text-gray-100 mt-8 md:mt-0">
-        <p class="text-lg font-semibold">Catalão Borrachas</p>
-        <p>Av. Dr. Lamartine Pinto de Avelar, 3088 – Setor Goianiense</p>
-        <p>Catalão, GO</p>
-
-        <p class="mt-4 font-semibold">Contato:</p>
-        <p>Fone: +55 (64) 3411-3307</p>
-        <p>Plantão: +55 (64) 9953-3307</p>
-        <p>E-mail: <a href="mailto:contato@catalao.com.br" class="underline text-yellow-400">contato@catalao.com.br</a></p>
+      <!-- Informações da empresa (centralizado) -->
+      <div class="w-full md:w-1/2 footer-container">
+        <div class="footer-content">
+          <p class="text-lg font-semibold">Catalão Borrachas</p>
+          <p>Av. Dr. Lamartine Pinto de Avelar, 3088 – Setor Goianiense</p>
+          <p>Catalão, GO</p>
+          
+          <p class="mt-4 font-semibold">Contato:</p>
+          <p>Fone: +55 (64) 3411-3307</p>
+          <p>Plantão: +55 (64) 9953-3307</p>
+          <p>E-mail: <a href="mailto:contato@catalao.com.br" class="underline text-yellow-400">contato@catalao.com.br</a></p>
+        </div>
       </div>
     </div>
   </footer>
 
 
+  
 </body>
 </html>
