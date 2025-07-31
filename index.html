@@ -7,6 +7,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Fonte Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
 
  .footer-container {
@@ -501,38 +503,57 @@
   
 </script>
 
- <!-- Rodapé com o mapa e as informações -->
-  <footer id ="contatos" class="bg-footer text-white py-12 px-4">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-      <!-- Mapa com marcador OSM -->
-      <div class="w-full md:w-1/2">
-        <h3 class="text-2xl font-semibold mb-4">Nossa Localização</h3>
-        <iframe
-          width="100%"
-          height="300"
-          frameborder="0"
-          scrolling="no"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=-47.9235%2C-18.1435%2C-47.9145%2C-18.1370&marker=-18.1402954%2C-47.9189418"
-          style="border:1px solid #ccc;">
-        </iframe>
-        <small><a href="https://www.openstreetmap.org/?mlat=-18.1402954&mlon=-47.9189418#map=16/-18.1403/-47.9189" target="_blank" class="text-gray-300">Ver mapa maior</a></small>
-      </div>
+<!-- Rodapé com o mapa e as informações -->
+<footer id="contatos" class="bg-footer text-white py-12 px-4">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+    <!-- Mapa com marcador OSM -->
+    <div class="w-full md:w-1/2">
+      <h3 class="text-2xl font-semibold mb-4">Nossa Localização</h3>
+      <iframe
+        width="100%"
+        height="300"
+        frameborder="0"
+        scrolling="no"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-47.9235%2C-18.1435%2C-47.9145%2C-18.1370&marker=-18.1402954%2C-47.9189418"
+        style="border:1px solid #ccc;">
+      </iframe>
+      <small>
+        <a href="https://www.openstreetmap.org/?mlat=-18.1402954&mlon=-47.9189418#map=16/-18.1403/-47.9189" 
+           target="_blank" class="text-gray-300 hover:text-yellow-400 transition">
+          Ver mapa maior
+        </a>
+      </small>
+    </div>
 
-      <!-- Informações da empresa (centralizado) -->
-      <div class="w-full md:w-1/2 footer-container">
-        <div class="footer-content">
-          <p class="text-lg font-semibold">Catalão Borrachas</p>
-          <p>Av. Dr. Lamartine Pinto de Avelar, 3088 – Setor Goianiense</p>
-          <p>Catalão, GO</p>
-          
-          <p class="mt-4 font-semibold">Contato:</p>
-          <p><a href="https://wa.me/5564999999999" target="_blank" class="hover:underline hover:text-yellow-500">Telefone: 5564999999999</a></p>
-          <p><a href="https://wa.me/5564999999999" target="_blank" class="hover:underline hover:text-yellow-500">Plantão: 5564999999999</a></p>
-          <p>E-mail: <a href="mailto:contato@catalao.com.br" class="underline text-yellow-400">contato@catalao.com.br</a></p>
+    <!-- Informações da empresa + redes sociais -->
+    <div class="w-full md:w-1/2 footer-container mt-10 md:mt-0">
+      <div class="footer-content text-center md:text-left">
+        <p class="text-lg font-semibold">Catalão Borrachas</p>
+        <p>Av. Dr. Lamartine Pinto de Avelar, 3088 – Setor Goianiense</p>
+        <p>Catalão, GO</p>
+
+        <p class="mt-4 font-semibold">Contato:</p>
+        <p><a href="https://wa.me/5564999999999" target="_blank" class="hover:underline hover:text-yellow-500">Telefone: 5564999999999</a></p>
+        <p><a href="https://wa.me/5564999999999" target="_blank" class="hover:underline hover:text-yellow-500">Plantão: 5564999999999</a></p>
+        <p>E-mail: <a href="mailto:contato@catalao.com.br" class="underline text-yellow-400">contato@catalao.com.br</a></p>
+
+        <!-- Ícones das redes sociais -->
+        <div class="flex justify-center md:justify-start gap-6 mt-6 text-white">
+          <a href="https://www.instagram.com/suaempresa" target="_blank" class="hover:text-yellow-400 transition">
+            <i class="fab fa-instagram text-2xl"></i>
+          </a>
+          <a href="https://www.facebook.com/suaempresa" target="_blank" class="hover:text-yellow-400 transition">
+            <i class="fab fa-facebook text-2xl"></i>
+          </a>
+          <a href="https://wa.me/5564999999999" target="_blank" class="hover:text-yellow-400 transition">
+            <i class="fab fa-whatsapp text-2xl"></i>
+          </a>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
+
 
 
 <script>
