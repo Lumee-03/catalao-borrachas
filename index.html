@@ -429,38 +429,54 @@
   });
 </script>
 
- <!-- Rodapé com o mapa e as informações -->
-  <footer class="bg-footer text-white py-12 px-4">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-      <!-- Mapa com marcador OSM -->
-      <div class="w-full md:w-1/2">
-        <h3 class="text-2xl font-semibold mb-4">Nossa Localização</h3>
-        <iframe
-          width="100%"
-          height="300"
-          frameborder="0"
-          scrolling="no"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=-47.9235%2C-18.1435%2C-47.9145%2C-18.1370&marker=-18.1402954%2C-47.9189418"
-          style="border:1px solid #ccc;">
-        </iframe>
-        <small><a href="https://www.openstreetmap.org/?mlat=-18.1402954&mlon=-47.9189418#map=16/-18.1403/-47.9189" target="_blank" class="text-gray-300">Ver mapa maior</a></small>
-      </div>
-
-      <!-- Informações da empresa (centralizado) -->
-      <div class="w-full md:w-1/2 footer-container">
-        <div class="footer-content">
-          <p class="text-lg font-semibold">Catalão Borrachas</p>
-          <p>Av. Dr. Lamartine Pinto de Avelar, 3088 – Setor Goianiense</p>
-          <p>Catalão, GO</p>
-          
-          <p class="mt-4 font-semibold">Contato:</p>
-          <p>Telefone: +55 (64) 3411-3307</p>
-          <p>Plantão: +55 (64) 9953-3307</p>
-          <p>E-mail: <a href="mailto:contato@catalao.com.br" class="underline text-yellow-400">contato@catalao.com.br</a></p>
-        </div>
-      </div>
+<!-- Seção de Rodapé com o mapa -->
+<footer id="contato" class="bg-[#0a1e3a] text-white py-12 px-4">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+    <!-- Mapa com marcador OSM -->
+    <div class="w-full md:w-1/2">
+      <h3 class="text-2xl font-semibold mb-4">Nossa Localização</h3>
+      <iframe
+        width="100%"
+        height="300"
+        frameborder="0"
+        scrolling="no"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-47.9235%2C-18.1435%2C-47.9145%2C-18.1370&marker=-18.1402954%2C-47.9189418"
+        style="border:1px solid #ccc;">
+      </iframe>
+      <small><a href="https://www.openstreetmap.org/?mlat=-18.1402954&mlon=-47.9189418#map=16/-18.1403/-47.9189" target="_blank" class="text-gray-300">Ver mapa maior</a></small>
     </div>
-  </footer>
+
+    <!-- Informações da empresa -->
+    <div class="w-full md:w-1/2 text-center md:text-left text-gray-100 mt-8 md:mt-0">
+      <p class="text-lg font-semibold">Catalão Borrachas</p>
+      <p>Av. Dr. Lamartine Pinto de Avelar, 3088 – Setor Goianiense</p>
+      <p>Catalão, GO</p>
+      
+      <p class="mt-4 font-semibold">Contato:</p>
+      <p>Fone: +55 (64) 3411-3307</p>
+      <p>Plantão: +55 (64) 9953-3307</p>
+      <p>E-mail: <a href="mailto:contato@catalao.com.br" class="underline text-yellow-400">contato@catalao.com.br</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Script do Menu Mobile -->
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    bar1.classList.toggle('rotate-45');
+    bar1.classList.toggle('translate-y-2');
+    bar2.classList.toggle('opacity-0');
+    bar3.classList.toggle('-rotate-45');
+    bar3.classList.toggle('-translate-y-2');
+  });
+</script>
 
 
   
