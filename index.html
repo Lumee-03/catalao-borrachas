@@ -8,29 +8,98 @@
   <!-- Fonte Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    /* Seu CSS do Rodapé e animação aqui */
+    /* Estilos do cabeçalho com detalhes amarelos */
+    header {
+      background-color: #0a1e3a;
+    }
+    header a:hover {
+      color: #fbbf24; /* amarelo-400 */
+    }
+    header .bg-yellow {
+      background-color: #fbbf24;
+    }
+    header .bg-yellow:hover {
+      background-color: #f59e0b; /* amarelo-500 */
+    }
+    header .underline-yellow {
+      background: linear-gradient(to right, #fde68a, #fbbf24, #f59e0b);
+      background-size: 300%;
+      animation: gradientMove 4s linear infinite;
+    }
 
+    /* Animação de sublinhado degradê amarelo */
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+
+    /* Fundo animado azul */
+    @keyframes gradienteAzul {
+      0%, 100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+    .bg-animado {
+      background: linear-gradient(270deg, 
+        #0f172a 0%,       /* azul escuro */
+        #2563eb 45%,      /* azul vibrante */
+        #3b82f6 55%,      /* azul médio */
+        #0f172a 100%);
+      background-size: 200% 200%;
+      animation: gradienteAzul 40s ease-in-out infinite;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: #0a1e3a;
+      color: white;
+      padding: 50px 20px;
+    }
+
+    footer a {
+      color: #fbbf24;
+      text-decoration: underline;
+    }
+
+    footer a:hover {
+      color: #f59e0b;
+    }
+
+    /* Estilo do menu de navegação no cabeçalho */
+    nav a {
+      color: white;
+      padding: 10px 20px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fbbf24;
+    }
+
+    /* Ajustes de layout */
     .footer-container {
       display: flex;
-      justify-content: center; /* Centraliza horizontalmente */
-      align-items: center; /* Centraliza verticalmente */
-      height: 400px; /* Altura do rodapé */
-      color: white;
-      gap: 40px; /* Adiciona espaço entre o mapa e as informações */
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      width: 100%;
     }
 
     .footer-content {
-      max-width: 800px;  /* Limita a largura do conteúdo */
-      padding: 0 20px;   /* Espaçamento nas laterais */
-      margin-left: 40px; /* Adiciona margem à esquerda para afastar das informações */
+      max-width: 800px;
+      padding: 0 20px;
+      margin-left: 40px;
     }
 
     .w-full.md\:w-1\/2 {
-      margin-right: 20px; /* Espaço para garantir que o mapa e as informações não se toquem */
+      margin-right: 20px;
     }
   </style>
 </head>
-<body>
+<body class="bg-[#0a1e3a]">
 
 <header class="text-white py-4 shadow-md sticky top-0 z-50 font-[Poppins]">
   <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
@@ -48,7 +117,7 @@
       <a href="#produtos" class="hover:text-yellow-400 transition">Produtos</a>
       <a href="#servicos" class="hover:text-yellow-400 transition">Serviços</a>
       <a href="#depoimentos" class="hover:text-yellow-400 transition">Depoimentos</a>
-      <a href="#contato" class="hover:text-yellow-400 transition">Contatos</a> <!-- Aqui está o link -->
+      <a href="#contato" class="hover:text-yellow-400 transition">Contatos</a> <!-- Link Contatos -->
       <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
          target="_blank" rel="noopener noreferrer"
          class="bg-yellow-400 text-black px-3 py-2 rounded-lg hover:bg-yellow-500 transition text-sm sm:text-base">
@@ -64,37 +133,9 @@
       <span class="w-6 h-0.5 bg-white transition-all duration-300" id="bar3"></span>
     </button>
   </div>
-
-  <!-- Menu Mobile -->
-  <nav id="mobile-menu" class="md:hidden hidden px-4 pb-6 space-y-3 bg-[#0a1e3a] border-t border-yellow-400">
-    <a href="#produtos" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Produtos</a>
-    <a href="#servicos" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Serviços</a>
-    <a href="#depoimentos" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Depoimentos</a>
-    <a href="#contato" class="block text-white hover:text-yellow-400 transition py-2 border-b border-transparent hover:border-yellow-400">Contatos</a> <!-- Aqui está o link -->
-    <a href="https://wa.me/5564999466730?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
-       target="_blank" rel="noopener noreferrer"
-       class="block bg-yellow-400 text-black px-4 py-2 rounded-lg hover:bg-yellow-500 transition text-center">
-      Solicite seu Orçamento
-    </a>
-  </nav>
-
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('mobile-menu');
-    const bar1 = document.getElementById('bar1');
-    const bar2 = document.getElementById('bar2');
-    const bar3 = document.getElementById('bar3');
-
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-      bar1.classList.toggle('rotate-45');
-      bar1.classList.toggle('translate-y-2');
-      bar2.classList.toggle('opacity-0');
-      bar3.classList.toggle('-rotate-45');
-      bar3.classList.toggle('-translate-y-2');
-    });
-  </script>
 </header>
+
+
 
 <!-- Seção Apresentação com fundo animado só azul -->
 <section class="relative bg-animado h-[50vh] sm:h-[70vh] md:h-[80vh] flex items-center justify-start px-4 sm:px-10 md:px-20">
