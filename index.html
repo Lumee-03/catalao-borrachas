@@ -472,6 +472,33 @@
   nextSupplierBtn.addEventListener('click', () => {
     container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
   });
+
+  // Swipe para dispositivos móveis
+  let startTouchX = 0;
+  let endTouchX = 0;
+
+  container.addEventListener('touchstart', (e) => {
+    startTouchX = e.touches[0].clientX;
+  });
+
+  container.addEventListener('touchend', (e) => {
+    endTouchX = e.changedTouches[0].clientX;
+    handleSwipeFornecedores();
+  });
+
+  function handleSwipeFornecedores() {
+    const distance = startTouchX - endTouchX;
+    const threshold = 50;
+
+    if (distance > threshold) {
+      // deslizar para esquerda
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    } else if (distance < -threshold) {
+      // deslizar para direita
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    }
+  }
+  
 </script>
 
  <!-- Rodapé com o mapa e as informações -->
@@ -559,6 +586,62 @@
       nextItem(); // deslizar para a esquerda → próximo
     } else if (diff < -threshold) {
       prevItem(); // deslizar para a direita → anterior
+    }
+  }
+</script>
+
+
+<script>
+  const testimonials = document.querySelectorAll('.testimonial-item');
+  const nextTestimonial = document.getElementById('nextTestimonial');
+  const prevTestimonial = document.getElementById('prevTestimonial');
+
+  let currentTestimonial = 0;
+
+  function showTestimonial(index) {
+    testimonials.forEach((item, i) => {
+      item.classList.toggle('hidden', i !== index);
+    });
+  }
+
+  function nextT() {
+    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+    showTestimonial(currentTestimonial);
+  }
+
+  function prevT() {
+    currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+    showTestimonial(currentTestimonial);
+  }
+
+  nextTestimonial.addEventListener('click', nextT);
+  prevTestimonial.addEventListener('click', prevT);
+
+  // Mostrar o primeiro depoimento ao carregar
+  showTestimonial(currentTestimonial);
+
+  // Swipe no celular
+  const testimonialCarousel = document.getElementById('testimonial-carousel');
+  let startX = 0;
+  let endX = 0;
+
+  testimonialCarousel.addEventListener('touchstart', (e) => {
+    startX = e.changedTouches[0].screenX;
+  });
+
+  testimonialCarousel.addEventListener('touchend', (e) => {
+    endX = e.changedTouches[0].screenX;
+    handleSwipeTestimonial();
+  });
+
+  function handleSwipeTestimonial() {
+    const diff = startX - endX;
+    const threshold = 50;
+
+    if (diff > threshold) {
+      nextT(); // deslizar para esquerda
+    } else if (diff < -threshold) {
+      prevT(); // deslizar para direita
     }
   }
 </script>
